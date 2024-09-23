@@ -1,3 +1,5 @@
+'use client';
+import { useState } from 'react';
 import serviciosIconoA from 'public/images/serviciosIconoA.png';
 import serviciosIconoB from 'public/images/serviciosIconoB.png';
 import serviciosIconoC from 'public/images/serviciosIconoC.png';
@@ -9,20 +11,25 @@ const Servicios = () => {
     const lChevron = '<';
     const rChevron = '>';
 
-    const ServicioItem = ({ enable, color, titulo, texto, icono }) => {
+    const [currentServ, setCurrentServ] = useState(0);
+
+    const ServicioItem = ({ index, color, titulo, texto, icono }) => {
         return (
-            <div className={` mx-4 flex flex-col ${!enable && ' opacity-30 pointer-events-none'} `}>
+            <div
+                data-aos-once="true" data-aos='fade'
+                key={index}
+                className={` mb-4 md:mx-4 md:mb-0 ${ (currentServ===index || currentServ+1 ===index) ? ' flex flex-col': ' md:hidden' } transition-all ease-in-out duration-300 `}>
                 <div className={` flex-grow ${color === 'y' ? 'bg-[rgba(255,255,0,0.8)] text-black' : 'bg-[rgba(97,61,210,0.8)] text-white'} p-6 rounded-t-xl w-80 text-center `}>
                     <img className={` max-h-32 h-full w-auto mx-auto`} src={icono} alt='' />
                     <h3 className={` font-RobotoCondensed font-bold text-xl text-center my-3 `}>{titulo}</h3>
                     <p className={` font-normal text-base leading-snug indent-4 text-justify hyphens-auto font-Raleway `}>{texto}</p>
                 </div>
-                <p className={` block rounded-b-xl text-center p-2 font-normal text-opacity-30 hover:text-opacity-100 text-lg cursor-pointer ${color === 'y' ? 'bg-[rgba(203,203,77,0.8)] text-black' : 'bg-[rgba(18,13,36,0.8)] text-white'} transform-all ease-in-out duration-300 `} href='' alt=''>Ver más</p>
+                <p className={` block rounded-b-xl text-center py-3 font-bold text-opacity-30 hover:text-opacity-100 text-sm cursor-pointer ${color === 'y' ? 'bg-[rgba(203,203,77,0.8)] text-black' : 'bg-[rgba(18,13,36,0.8)] text-white'} transform-all ease-in-out duration-300 uppercase `} href='' alt=''>Ver más</p>
             </div>
         )
     }
 
-    const Servicios = [
+    const ServiciosData = [
         {   icono: serviciosIconoC,
             color: 'p',
             titulo: 'E-Commerce',
@@ -43,7 +50,18 @@ const Servicios = () => {
             titulo: 'Applicaciones móviles',
             texto: 'Una aplicación móvil potencia la conveniencia, personaliza la interacción, optimiza la movilidad y fortalece la conexión constante, mejorando la satisfacción del usuario.'
         }
-    ]
+    ];
+
+    // Handle left chevron click
+    const handleLeftClick = () => {
+        setCurrentServ((prev) => (prev === 0 ? ServiciosData.length - 2 : prev - 2));
+    };
+
+    // Handle right chevron click
+    const handleRightClick = () => {
+        setCurrentServ((prev) => (prev === ServiciosData.length - 2 ? 0 : prev + 2));
+    };
+
 
 
     return (
@@ -72,34 +90,36 @@ const Servicios = () => {
                 </div>
             </section>
 
-            <section className={` relative lg:px-0 px-4 pb-8`}>
-                <div className={` absolute top-0 left-0 w-full h-full bg-white  `} />
-                <div className={` absolute top-0 left-0 w-full h-full bg-[rgba(97,61,210,0.3)] `} />
-                <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/serviciosbg.jpg')] bg-center bg-cover opacity-10 `} />
+            <section className={` relative pb-28 transition-all ease-in-out duration-300`} style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 95%)' }}>
+                <div className={` absolute top-0 left-0 w-full h-full bg-white  `} style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 95%)' }} />
+                <div className={` absolute top-0 left-0 w-full h-full bg-[rgba(97,61,210,0.3)] `} style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 95%)' }} />
+                <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/serviciosbg.jpg')] bg-center bg-cover opacity-10 `} style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 95%)' }} />
                 <div className={` relative uppercase text-white font-RobotoCondensed font-bold pt-8 mb-4 max-w-5xl mx-auto text-center text-2xl tracking-widest `}>
                     Nuestros Servicios</div>
 
                 <div className={` relative bg-white bg-opacity-20 py-12 w-full `}>
 
-                    {/* chevrons block */}
-                    <div className={` relative flex max-w-5xl mx-auto overflow-hidden items-center justify-center `}>
-                        {!!Servicios?.length && (
-                            <div className={` flex flex-row `}>
-                                {Servicios.map((item, index) => (
+                    {/* servicios block */}
+                    <div className={` relative flex max-w-5xl mx-auto overflow-hidden items-center justify-center transition-all ease-in-out duration-300 `}>
+                        {!!ServiciosData?.length && (
+                            <div className={` flex flex-col md:flex-row md:h-96`}>
+                                {ServiciosData.map((item, index) => (
                                     <ServicioItem
-                                        enable
-                                        icono={item.icono.src}
                                         key={index}
+                                        index={index}
+                                        icono={item.icono.src}
                                         color={item.color}
                                         titulo={item.titulo}
                                         texto={item.texto} />
                                 ))}
                             </div>
                         )}
-                        <p className={` text-white text-9xl font-extrabold font-Economica absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer `}>{lChevron}</p>
-                        <p className={` text-white text-9xl font-extrabold font-Economica absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer `}>{rChevron}</p>
+                        
+                        {/* left chevrons */} <p onClick={handleLeftClick} className={` hidden md:block text-white text-9xl font-extrabold font-Economica absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer `}>{lChevron}</p>
+                        {/* right chevrons */} <p onClick={handleRightClick}  className={` hidden md:block text-white text-9xl font-extrabold font-Economica absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer `}>{rChevron}</p>
+                        
                     </div>
-                    {/* chevrons block end */}
+                    {/* servicios block end */}
 
                 </div>
 

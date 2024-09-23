@@ -14,9 +14,7 @@ const RootLayout = ({children}) => {
             </head>
             <body className="antialiased text-white min-w-full min-h-screen bg-black flex flex-col ">
                 <AOSInitializer />
-                <Header />
                 {children}
-                <Footer />
             </body>
         </html>
     );
