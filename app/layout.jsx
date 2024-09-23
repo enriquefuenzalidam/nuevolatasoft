@@ -4,7 +4,7 @@ import { Footer } from '../components/footer';
 import AOSInitializer from 'components/AOSInitializer';
 
 export const metadata = {
-    title: 'Impulso 360'
+    title: 'Latasoft'
 };
 
 const RootLayout = ({children}) => { 
