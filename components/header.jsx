@@ -1,46 +1,35 @@
-import Image from 'next/image';
+
 import Link from 'next/link';
-import netlifyLogo from 'public/netlify-logo.svg';
-import githubLogo from 'public/images/github-mark-white.svg';
+import Scrollhandling from 'components/Scrollhandling';
+
+import impulso360Logo from 'public/images/logob.png'
 
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' },
-    { linkText: 'Classics', href: '/classics' }
+    { linkText: 'Inicio', href: '#inicio' },
+    { linkText: 'Servicios', href: '#serviciosIntegrales' },
+    { linkText: 'Quienes somos', href: '#porQueNosotros' },
+    { linkText: 'Contacto', href: '#contacto' }
 ];
 
 export function Header() {
+
     return (
-        <nav className="flex flex-wrap items-center gap-4 pt-6 pb-12 sm:pt-12 md:pb-24">
-            <Link href="/">
-                <Image src={netlifyLogo} alt="Netlify logo" />
-            </Link>
+        <nav id="navbar" className="hidden opacity-0 border-b-2 border-solid border-white border-opacity-30 fixed top-0 left-0 z-50 w-full font-Roboto py-3 bg-black bg-opacity-40 backdrop-blur-md text-white transition-all -translate-y-full ease-in-out duration-[618ms]">
+          <Scrollhandling />
             {!!navItems?.length && (
-                <ul className="flex flex-wrap gap-x-4 gap-y-1">
+                <ul className=" max-w-5xl mx-auto flex flex-wrap gap-x-8 justify-center items-center">
+                    <li>
+                      <img src={impulso360Logo.src} className=" align-middle w-auto md:h-8 h-0 opacity-80 " alt="Netlify logo" /></li>
                     {navItems.map((item, index) => (
-                        <li key={index}>
-                            <Link
-                                href={item.href}
-                                className="inline-block px-1.5 py-1 transition hover:opacity-80 sm:px-3 sm:py-2"
-                            >
-                                {item.linkText}
-                            </Link>
-                        </li>
+                    <li key={index}>
+                      <Link href={item.href}
+                            className="inline-block text-sm lg:text-lg transition opacity-80 font-bold uppercase no-underline hover:text-[#fc27aa]">
+                            {item.linkText}
+                      </Link>
+                    </li>
                     ))}
                 </ul>
             )}
-            <div className="flex-grow justify-end hidden lg:flex lg:mr-1">
-                <Link
-                    href="https://github.com/netlify-templates/next-platform-starter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Image src={githubLogo} alt="GitHub logo" className="w-7" />
-                </Link>
-            </div>
         </nav>
     );
 }
