@@ -15,7 +15,8 @@ module.exports = {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
                 Roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
                 RobotoCondensed: ['Roboto Condensed', ...defaultTheme.fontFamily.sans],
-                NotoSerif: ['Noto Serif', ...defaultTheme.fontFamily.sans]
+                NotoSerif: ['Noto Serif', ...defaultTheme.fontFamily.sans],
+                Raleway: ['Raleway', ...defaultTheme.fontFamily.sans]
             },
             transform: {
               '3d': 'translateZ(-1px) scale(2)',

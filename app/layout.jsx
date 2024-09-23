@@ -12,7 +12,7 @@ const RootLayout = ({children}) => {
         <html lang="es" className={`scroll-smooth`}>
             <head>
             </head>
-            <body className="antialiased text-white bg-black">
+            <body className="antialiased text-white min-w-full min-h-screen bg-black flex flex-col ">
                 <AOSInitializer />
                 <Header />
                 {children}
