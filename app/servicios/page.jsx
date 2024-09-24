@@ -42,13 +42,13 @@ const Servicios = () => {
         },
         {
             icono: serviciosIconoA,
-            color: 'y',
+            color: 'p',
             titulo: 'Intranet',
             texto: 'La intranet fortalece la comunicación interna, centraliza la información, facilita la colaboración y aumenta la eficiencia operativa interna de la empresa.'
         },
         {
             icono: serviciosIconoD,
-            color: 'p',
+            color: 'y',
             titulo: 'Diseño de páginas web',
             texto: 'Una página web amplía la visibilidad, establece credibilidad y facilita la interacción, impulsando la presencia y el éxito comercial.'
         },
@@ -61,13 +61,19 @@ const Servicios = () => {
     ];
 
 
-    const ServicioCard = ({ titulo, precio, cuotas, imagen, fondocolor, fondoCart }) => {
-        return (
+    const ServicioCard = ({ index, titulo, precio, cuotas, imagen, fondocolor, fondoCart }) => {
+        return (<>
 
-            <section className={` -mt-48 relative transition-all ease-in-out duration-300 bg-cover`} style={{ backgroundImage: `url('${fondoCart.src}')` }} >
-                <div className={` relative pb-32 pt-40 w-full ${fondocolor} bg-opacity-70 `} >
+            <DiagonalSeparador />
+            <section key={index} className={` -mt-48 relative transition-all ease-in-out duration-300 `} >
+
+                <div className={`  bg-cover bg-no-repeat absolute top-0 left-0 w-full h-full `} style={{ backgroundImage: `url('${fondoCart.src}')` }}  />
+                <div className={` ${fondocolor} bg-opacity-70 absolute top-0 left-0 w-full h-full `} />
+                <div className={` backdrop-grayscale-60 absolute top-0 left-0 w-full h-full `} />
+
+                <div className={` relative pb-32 pt-40 w-full  `} >
                     <div className={` relative flex max-w-5xl mx-auto overflow-hidden items-center justify-center transition-all ease-in-out duration-300 `}>
-                        <div data-aos-once="true" data-aos='fade-up' className={` border-solid border-2 border-[#a098b9] border-opacity-30 rounded-2xl font-Raleway p-5 w-80 md:w-[42rem] transition-all ease-in-out duration-300 bg-white bg-opacity-80`} >
+                        <div data-aos-once="true" data-aos='fade' className={` border-solid border-2 border-[#a098b9] border-opacity-30 rounded-2xl font-Raleway p-5 w-80 md:w-[42rem] transition-all ease-in-out duration-300 bg-white bg-opacity-80`} >
 
                             <div className={` flex flex-col-reverse md:flex-row transition-all ease-in-out duration-300 justify-center items-center px-0 pt-0 md:px-3 md:pt-3 `}>
                                 <div className={` w-full md:w-7/12  transition-all ease-in-out duration-300`}>
@@ -95,16 +101,48 @@ const Servicios = () => {
                 </div>
             </section>
 
-        )
-    }
+            </>);
+    };
 
-    const serviciosCards = [
+    const ServiciosCards = [
         {
-            titulo: 'Diseño web',
-            precio: '$ 220.000 IVA incluido',
-            cuotas: '(Hasta 3 cuotas)',
-            imagen: imagenServicios01
-        }
+                fondoCart: serviciosbgB,
+                fondocolor: 'bg-[#FFFFFF]',
+                titulo: 'Diseño web',
+                precio: '$ 220.000 IVA incluido',
+                cuotas: '(Hasta 3 cuotas)',
+                imagen: imagenServicios01 },
+            { 
+                fondoCart: serviciosbgB,
+                fondocolor: 'bg-[#FFFF00]',
+                titulo: 'Tienda online',
+                precio: '$ 220.000 IVA incluido',
+                cuotas: '(Hasta 3 cuotas)',
+                imagen: imagenServicios01 },
+            { 
+                fondoCart: serviciosbgB,
+                fondocolor: 'bg-[#000000]',
+                titulo: 'Proovedor para agencias de marketing',
+                imagen: imagenServicios01 },
+            { 
+                fondoCart: serviciosbgB,
+                fondocolor: 'bg-[#613DD2]',
+                titulo: 'Desarrollo de Apps',
+                precio: '$3.500.000 IVA incluido',
+                cuotas: '(Hasta 5 cuotas $700.000 (IVA incluido)',
+                imagen: imagenServicios01 },
+            { 
+                fondoCart: serviciosbgB,
+                fondocolor: 'bg-[#FFFFFF]',
+                titulo: 'Venta y suscripción de software',
+                cuotas: 'Puedes comprar o suscribir un software como tambien puedes vender o suscribir tu software si lo prefieres.',
+                imagen: imagenServicios01 },
+            {
+                fondoCart: serviciosbgB,
+                fondocolor: 'bg-[#FFFF00]',
+                titulo: 'Venta de base de datos',
+                cuotas: 'Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.',
+                imagen: imagenServicios01 }
     ];
 
     const DiagonalSeparador = ({ }) => {
@@ -158,10 +196,10 @@ const Servicios = () => {
             <section className={` relative pb-32     transition-all ease-in-out duration-300 `} >
                 <div className={` absolute top-0 left-0 w-full h-full bg-white  `} />
                 <div className={` absolute top-0 left-0 w-full h-full bg-[rgba(97,61,210,0.3)] `} />
-                <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/serviciosbg.jpg')] bg-center bg-cover opacity-10 `} />
+                <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/serviciosbg.jpg')] bg-center bg-cover opacity-30 `} />
                 <div className={` relative uppercase text-white font-Roboto font-bold pt-8 mb-4 max-w-5xl mx-auto text-center text-2xl tracking-widest `}>
                     Nuestros Servicios</div>
-                <div className={` relative bg-white bg-opacity-20 py-12 `} >
+                <div className={` relative bg-white bg-opacity-40 py-12 `} >
                     <div className={` relative flex max-w-5xl mx-auto overflow-hidden items-center justify-center transition-all ease-in-out duration-300 `}>
                         {!!ServiciosData?.length && (
                             <div className={` flex flex-col md:flex-row md:h-96`}>
@@ -181,68 +219,20 @@ const Servicios = () => {
                     </div>
                 </div>
             </section>
-
-            <DiagonalSeparador />
-
-
-            <ServicioCard
-                fondoCart={serviciosbgB}
-                fondocolor='bg-[#FFFFFF]'
-                titulo='Diseño web'
-                precio='$ 220.000 IVA incluido'
-                cuotas='(Hasta 3 cuotas)'
-                imagen={imagenServicios01} />
-
-
-            <DiagonalSeparador />
-
-            <ServicioCard
-                fondoCart={serviciosbgB}
-                fondocolor='bg-[#FFFF00]'
-                titulo='Tienda online'
-                precio='$ 220.000 IVA incluido'
-                cuotas='(Hasta 3 cuotas)'
-                imagen={imagenServicios01} />
-
-
-            <DiagonalSeparador />
-
-            <ServicioCard
-                fondoCart={serviciosbgB}
-                fondocolor='bg-[#000000]'
-                titulo='Proovedor para agencias de marketing'
-                imagen={imagenServicios01} />
-
-
-            <DiagonalSeparador />
-
-            <ServicioCard
-                fondoCart={serviciosbgB}
-                fondocolor='bg-[#613DD2]'
-                titulo='Desarrollo de Apps'
-                precio='$3.500.000 IVA incluido'
-                cuotas='(Hasta 5 cuotas $700.000 (IVA incluido)'
-                imagen={imagenServicios01} />
-
-
-            <DiagonalSeparador />
-
-            <ServicioCard
-                fondoCart={serviciosbgB}
-                fondocolor='bg-[#FFFFFF]'
-                titulo='Venta y suscripción de software'
-                cuotas='Puedes comprar o suscribir un software como tambien puedes vender o suscribir tu software si lo prefieres.'
-                imagen={imagenServicios01} />
-
-
-            <DiagonalSeparador />
-
-            <ServicioCard
-                fondoCart={serviciosbgB}
-                fondocolor='bg-[#FFFF00]'
-                titulo='Venta de base de datos'
-                cuotas='Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.'
-                imagen={imagenServicios01} />
+            {!!ServiciosCards?.length && (
+                            <>
+                                {ServiciosCards.map((item, index) => (
+                                <ServicioCard
+                                    key={index}
+                                    fondoCart={item.fondoCart}
+                                    fondocolor={item.fondocolor}
+                                    titulo={item.titulo}
+                                    precio={item.precio}
+                                    cuotas={item.cuotas}
+                                    imagen={item.imagen} />
+                                ))}
+                            </>
+                        )}
 
 
         </main>
