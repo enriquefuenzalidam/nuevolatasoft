@@ -7,4 +7,4 @@ export function Footer() {
             </section>
         </footer>
     );
-}
+};

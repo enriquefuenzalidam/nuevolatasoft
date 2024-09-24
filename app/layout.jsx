@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { Header } from '../components/header';
+import NavigationBar from 'components/NavigationBar';
 import { Footer } from '../components/footer';
 import AOSInitializer from 'components/AOSInitializer';
 
@@ -14,6 +14,7 @@ const RootLayout = ({children}) => {
             </head>
             <body className="antialiased text-white min-w-full min-h-screen bg-black flex flex-col ">
                 <AOSInitializer />
+                <NavigationBar />
                 {children}
             </body>
         </html>
