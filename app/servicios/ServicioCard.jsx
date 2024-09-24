@@ -6,11 +6,11 @@ const ServicioCard = ({ index, titulo, precio, cuotas, imagen, fondocolor, fondo
             <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929] `} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
         </section>
 
-        <section key={index} className={` -mt-48 relative transition-all ease-in-out duration-300 `} >
+        <section key={index} className={` relative -mt-48 transition-all ease-in-out duration-300 `} >
 
-            <div className={`  bg-cover bg-no-repeat absolute top-0 left-0 w-full h-full `} style={{ backgroundImage: `url('${fondoCart.src}')` }}  />
-            <div className={` ${fondocolor} bg-opacity-70 absolute top-0 left-0 w-full h-full `} />
-            <div className={` backdrop-grayscale-60 absolute top-0 left-0 w-full h-full `} />
+            <div className={` absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat `} style={{ backgroundImage: `url('${fondoCart.src}')` }}  />
+            <div className={` absolute top-0 left-0 w-full h-full ${fondocolor} bg-opacity-70 `} />
+            <div className={` absolute top-0 left-0 w-full h-full backdrop-grayscale-60 `} />
 
             <div className={` relative pb-32 pt-40 w-full  `} >
                 <div className={` relative flex max-w-5xl mx-auto overflow-hidden items-center justify-center transition-all ease-in-out duration-300 `}>

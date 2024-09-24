@@ -9,6 +9,7 @@ import serviciosIconoD from 'public/images/serviciosIconoD.png';
 import imagenServicios01 from 'public/images/imagenservicios01.jpg';
 
 import serviciosbgB from 'public/images/serviciosbgB.jpg';
+import serviciosbgC from 'public/images/serviciosbg.jpg';
 
 import ServicioCard from './ServicioCard';
 
@@ -23,7 +24,7 @@ const Servicios = () => {
     const ServicioItem = ({ index, color, titulo, texto, icono }) => {
         return (
             <div
-                data-aos-once="true" data-aos='fade-up'
+                data-aos-once="true" data-aos='fade'
                 key={index}
                 className={` mb-4 md:mx-4 md:mb-0 ${(currentServ === index || currentServ + 1 === index) ? ' flex flex-col' : ' md:hidden'} transition-all ease-in-out duration-300 w-80 `}>
                 <div className={` flex-grow ${color === 'y' ? 'bg-[rgba(255,255,0,0.8)] text-black' : 'bg-[rgba(97,61,210,0.8)] text-white'} p-6 rounded-t-xl w-full text-center `}>
@@ -74,7 +75,7 @@ const Servicios = () => {
             imagen: imagenServicios01
         },
         {
-            fondoCart: serviciosbgB,
+            fondoCart: serviciosbgC,
             fondocolor: 'bg-[#FFFF00]',
             titulo: 'Tienda online',
             precio: '$ 220.000 IVA incluido',
@@ -82,7 +83,7 @@ const Servicios = () => {
             imagen: imagenServicios01
         },
         {
-            fondoCart: serviciosbgB,
+            fondoCart: serviciosbgC,
             fondocolor: 'bg-[#000000]',
             titulo: 'Proovedor para agencias de marketing',
             imagen: imagenServicios01
@@ -104,9 +105,16 @@ const Servicios = () => {
         },
         {
             fondoCart: serviciosbgB,
-            fondocolor: 'bg-[#FFFF00]',
+            fondocolor: 'bg-[#00FFFF]',
             titulo: 'Venta de base de datos',
             cuotas: 'Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.',
+            imagen: imagenServicios01
+        },
+        {
+            fondoCart: serviciosbgC,
+            fondocolor: 'bg-[#FFFF00]',
+            titulo: 'Venta de Zapatos XL',
+            cuotas: 'Compre zapatos en Latasoft.',
             imagen: imagenServicios01
         }
     ];
@@ -139,7 +147,12 @@ const Servicios = () => {
                             <div className={` flex flex-col md:flex-row md:h-96`}>
                                 {ServiciosData.map((item, index) => (
                                     <ServicioItem
-                                        key={index} index={index} icono={item.icono.src} color={item.color} titulo={item.titulo} texto={item.texto} />
+                                        key={index}
+                                        index={index}
+                                        icono={item.icono.src}
+                                        color={item.color}
+                                        titulo={item.titulo}
+                                        texto={item.texto} />
                                 ))}
                             </div>
                         )}
@@ -152,7 +165,14 @@ const Servicios = () => {
             {!!ServiciosCards?.length && (
                 <>
                     {ServiciosCards.map((item, index) => (
-                        <ServicioCard key={index} fondoCart={item.fondoCart} fondocolor={item.fondocolor} titulo={item.titulo} precio={item.precio} cuotas={item.cuotas} imagen={item.imagen} />
+                        <ServicioCard
+                            key={index}
+                            fondoCart={item.fondoCart}
+                            fondocolor={item.fondocolor}
+                            titulo={item.titulo}
+                            precio={item.precio}
+                            cuotas={item.cuotas}
+                            imagen={item.imagen} />
                     ))}
                 </>
             )}
