@@ -23,7 +23,7 @@ const Servicios = () => {
     const ServicioItem = ({ index, color, titulo, texto, icono }) => {
         return (
             <div
-                data-aos-once="true" data-aos='fade'
+                data-aos-once="true" data-aos='fade-up'
                 key={index}
                 className={` mb-4 md:mx-4 md:mb-0 ${(currentServ === index || currentServ + 1 === index) ? ' flex flex-col' : ' md:hidden'} transition-all ease-in-out duration-300 w-80 `}>
                 <div className={` flex-grow ${color === 'y' ? 'bg-[rgba(255,255,0,0.8)] text-black' : 'bg-[rgba(97,61,210,0.8)] text-white'} p-6 rounded-t-xl w-full text-center `}>
@@ -33,8 +33,8 @@ const Servicios = () => {
                 </div>
                 <p className={` block rounded-b-xl text-center py-3 font-bold text-opacity-30 hover:text-opacity-100 text-sm cursor-pointer ${color === 'y' ? 'bg-[rgba(203,203,77,0.8)] text-black' : 'bg-[rgba(18,13,36,0.8)] text-white'} transform-all ease-in-out duration-300 uppercase `} href='' alt=''>Ver más</p>
             </div>
-        )
-    }
+        );
+    };
 
     const ServiciosData = [
         {
@@ -122,15 +122,15 @@ const Servicios = () => {
         setCurrentServ((prev) => (prev === ServiciosData.length - 2 ? 0 : prev + 2));
     };
 
-
-
     return (
         <main className={` relative flex-grow bg-white mt-16 `}>
 
-            <section className={` relative pb-32     transition-all ease-in-out duration-300 `} >
-                <div className={` absolute top-0 left-0 w-full h-full bg-white  `} />
-                <div className={` absolute top-0 left-0 w-full h-full bg-[rgba(97,61,210,0.3)] `} />
+            <section className={` relative pb-32 transition-all ease-in-out duration-300 `} >
+
+                <div className={` absolute top-0 left-0 w-full h-full bg-white `} />
+                <div className={` absolute top-0 left-0 w-full h-full bg-[rgb(97,61,210)] opacity-30 `} />
                 <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/serviciosbg.jpg')] bg-center bg-cover opacity-30 `} />
+
                 <div className={` relative uppercase text-white font-Roboto font-bold pt-8 mb-4 max-w-5xl mx-auto text-center text-2xl tracking-widest `}>
                     Nuestros Servicios</div>
                 <div className={` relative bg-white bg-opacity-40 py-12 `} >

@@ -23,7 +23,7 @@ const NavigationBar = () => {
               Latasoft</h1>
           </li>
           {navItems.map((item, index) => (
-            <li data-aos-once='true' data-aos='fade' key={index} className={` block w-full md:w-min  md:inline-block my-3 md:my-0 border-b-[1px] border-solid border-opacity-0 hover:border-opacity-70 border-white `}>
+            <li data-aos-once='true' data-aos='fade' key={index} className={` block w-full md:w-min md:inline-block my-3 md:my-0 border-b-[1px] border-solid border-opacity-0 hover:border-opacity-70 border-white `}>
               <Link href={item.href}
                 className="block md:w-min text-nowrap font-Raleway text-white  text-lg md:text-base lg:text-lg opacity-80 font-medium no-underline transition-all ease-in-out duration-300">
                 {item.linkText}

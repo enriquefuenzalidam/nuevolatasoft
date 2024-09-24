@@ -1,7 +1,7 @@
 import '../styles/globals.css';
-import NavigationBar from 'components/NavigationBar';
 import { Footer } from '../components/footer';
 import AOSInitializer from 'components/AOSInitializer';
+import NavigationBar from 'components/NavigationBar';
 
 export const metadata = {
     title: 'Latasoft'
@@ -16,6 +16,7 @@ const RootLayout = ({children}) => {
                 <AOSInitializer />
                 <NavigationBar />
                 {children}
+                <Footer/>
             </body>
         </html>
     );

@@ -1,11 +1,11 @@
 
-
 const ServicioCard = ({ index, titulo, precio, cuotas, imagen, fondocolor, fondoCart }) => {
     return (<>
 
-        <section key={index} className={` relative z-40 -translate-y-20 drop-shadow-[0 4px 4px 4px 8px rgb(0,0,0,0.7)]`} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
+        <section key={index} className={` relative z-40 -translate-y-20 `} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
             <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929] `} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
         </section>
+
         <section key={index} className={` -mt-48 relative transition-all ease-in-out duration-300 `} >
 
             <div className={`  bg-cover bg-no-repeat absolute top-0 left-0 w-full h-full `} style={{ backgroundImage: `url('${fondoCart.src}')` }}  />
