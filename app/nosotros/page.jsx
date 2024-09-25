@@ -159,8 +159,6 @@ const Nosotros = () => {
                         </div>
                     )}
                 </section>
-
-
             </main>
         </>
     );
