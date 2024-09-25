@@ -13,58 +13,48 @@ import icono9 from 'public/images/icono9.png';
 import icono10 from 'public/images/icono10.png';
 import icono11 from 'public/images/icono11.png';
 
+
 const porquenosotros = [
     {
         icono: icono1,
         titulo: 'Mayor Escalabilidad y Flexibilidad',
-        descripcion: 'Para tu negocio.'
-    },
+        descripcion: 'Para tu negocio.' },
     {
         icono: icono2,
         titulo: 'Equipo de desarrollo especializado',
-        descripcion: 'Siempre a tu servicio.'
-    },
+        descripcion: 'Siempre a tu servicio.' },
     {
         icono: icono3,
         titulo: 'Mayor Tranquilidad en Ciberseguridad<',
-        descripcion: 'Protegiendo tus datos.'
-    },
+        descripcion: 'Protegiendo tus datos.' },
     {
         icono: icono4,
         titulo: 'Servicios de Calidad y control',
-        descripcion: 'De calidad garantizada.'
-    },
+        descripcion: 'De calidad garantizada.' },
     {
         icono: icono5,
         titulo: 'Una mejor gestión de proyectos',
-        descripcion: 'Adaptándonos a tus necesidades.'
-    },
+        descripcion: 'Adaptándonos a tus necesidades.' },
     {
         icono: icono6,
         titulo: 'Soporte y Mantenimiento',
-        descripcion: 'Postventa garantizada.'
-    },
+        descripcion: 'Postventa garantizada.' },
     {
         icono: icono7,
         titulo: 'Mayor Eficiencia y Productividad',
-        descripcion: 'Para tu empresa.'
-    },
+        descripcion: 'Para tu empresa.' },
     {
         icono: icono8,
-        titulo: 'Reducción de Riesgos y Costos'
-    },
+        titulo: 'Reducción de Riesgos y Costos' },
     {
         icono: icono9,
-        titulo: 'Nos enfocamos en tu solución'
-    },
+        titulo: 'Nos enfocamos en tu solución' },
     {
         icono: icono10,
-        titulo: 'Enfócate en tu negocio principal'
-    },
+        titulo: 'Enfócate en tu negocio principal' },
     {
         icono: icono11,
-        titulo: 'Te Ahorramos tiempo y dolores de cabeza'
-    }
+        titulo: 'Te Ahorramos tiempo y dolores de cabeza' }
 ];
 
 const Nosotros = () => {
@@ -75,20 +65,17 @@ const Nosotros = () => {
             text: "Cuando Nicolas se contactó con nosotros para ofrecernos servicios, la verdad vi su motivation y carisma por ayudarnos a mejorar como empresa, le dimos la oportunidad de mostrarnos que podía hacer él por Latasoft, hoy estoy a gusto con los servicios ofrecidos, sigan así y mejor chicos",
             author: "Mauricio",
             company: "Pampa Energía",
-            location: "Argentina",
-        },
+            location: "Argentina" },
         {
             text: "Latasoft ha sido un socio invaluable en nuestro crecimiento. Su dedicación y atención al detalle han hecho la diferencia en nuestros proyectos.",
             author: "Laura",
             company: "Tech Innovators",
-            location: "Chile",
-        },
+            location: "Chile" },
         {
             text: "Gracias a Latasoft, hemos logrado implementar soluciones tecnológicas que nos han permitido optimizar nuestros procesos y mejorar la experiencia del cliente.",
             author: "Javier",
             company: "Soluciones Avanzadas",
-            location: "Perú",
-        },
+            location: "Perú" }
     ];
 
     useEffect(() => {
@@ -131,7 +118,7 @@ const Nosotros = () => {
                                 {porquenosotros.map((item, index) => (
                                     <div key={index}>
                                         <img src={item.icono.src} alt="Escalabilidad" className={`mx-auto mb-4 w-14 `} />
-                                        <h3 className={`font-semibold`}>{item.titulo}</h3>
+                                        <h3 className={` font-semibold `}>{item.titulo}</h3>
                                         {item.descripcion && (<p>{item.descripcion}</p>)}
                                     </div>
                                 ))}
@@ -144,12 +131,12 @@ const Nosotros = () => {
                 <section className={`bg-gray-800 text-white py-24 px-6`}>
                     <h2 className={`text-[rgb(255,255,0)] text-center mb-6 text-3xl lg:text-4xl transition-all ease-in-out duration-200 font-bold font-RobotoCondensed `} style={{ lineHeight: `1.38` }}>Innovación y Expansión para <br className={` inline sm:hidden `} />un Futuro Conocido</h2>
                     <p className={`text-justify hyphens-auto indent-8 max-w-5xl mx-auto text-lg md:text-xl lg:text-2xl transition-all ease-in-out duration-200 opacity-80 `} style={{ lineHeight: `1.86` }}>
-                        La vision del equipo de Latasoft es creer que cuando la tecnología se centra en las personas, maximiza el impacto de la organización en su industria, y en la sociedad en general. Nuestras flechas apuntan a ser siempre un referente de nuestra industria y con mirada de expansion, por lo que siempre trabajamos para que nuestros clientes logren sus objetivos, ya que sus objetivos se vuelven nuestros objetivos tambien. Como dice nuestra frase &quot;Por el mundo que no conocemos, pero conoceremos, Latasoft&quot;.
+                        La vision del equipo de Latasoft es creer que cuando la tecnología se centra en las personas, maximiza el impacto de la organización en su industria, y en la sociedad en general. Nuestras flechas apuntan a ser siempre un referente de nuestra industria y con mirada de expansion, por lo que siempre trabajamos para que nuestros clientes logren sus objetivos, ya que sus objetivos se vuelven nuestros objetivos tambien. Como dice nuestra frase <span className={` font-NotoSerif italic `}>&quot;Por el mundo que no conocemos, pero conoceremos, Latasoft&quot;</span>.
                     </p>
                 </section>
 
                 {/* Sección del Slider */}
-                <section className={`relative min-h-96 `}>
+                <section className={`relative h-96 `}>
 
                     {/* Imagen de fondo del slider */}
                     <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')] `} />
@@ -161,7 +148,7 @@ const Nosotros = () => {
                     {!!slides?.length && (
                         <div className={` relative max-w-5xl mx-auto block w-full h-full `}>
                             {slides.map((item, index) => (
-                                <div key={index} className={` absolute top-12 left-0 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide===index ? 'opacity-80': 'opacity-0'} transition-all ease-in-out duration-300 `}>
+                                <div key={index} className={` absolute top-48 left-0 -translate-y-1/2 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide===index ? 'opacity-80': 'opacity-0'} transition-all ease-in-out duration-700 `}>
                                     <div className={`  w-full h-full  flex flex-col justify-center items-center `}>
                                     <p className={` mb-6 italic font-NotoSerif px-6 `} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
                                     <h3 className={` font-bold px-6 `}>{item.author}</h3>
