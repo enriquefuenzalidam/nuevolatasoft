@@ -146,14 +146,12 @@ const Nosotros = () => {
 
                     {/* Contenido del slider */}
                     {!!slides?.length && (
-                        <div className={` relative max-w-5xl mx-auto block w-full h-full `}>
+                        <div className={` relative max-w-4xl mx-auto block w-full h-full `}>
                             {slides.map((item, index) => (
-                                <div key={index} className={` absolute top-48 left-0 -translate-y-1/2 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide===index ? 'opacity-80': 'opacity-0'} transition-all ease-in-out duration-700 `}>
-                                    <div className={`  w-full h-full  flex flex-col justify-center items-center `}>
-                                    <p className={` mb-6 italic font-NotoSerif px-6 `} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
+                                <div key={index} className={` absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-auto text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide===index ? 'opacity-80': 'opacity-0'} transition-all ease-in-out duration-700 `}>
+                                    <p className={` mb-6 italic font-NotoSerif px-6 text-justify hyphens-auto indent-5 `} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
                                     <h3 className={` font-bold px-6 `}>{item.author}</h3>
                                     <p className={` text-base lg:text-lg px-6 `} ><span className={` text-[rgb(255,255,0)] `} >{item.company}</span>, {item.location}.</p>
-                                    </div>
                                 </div>
                             ))}
                         </div>

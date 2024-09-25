@@ -1,5 +1,5 @@
 
-const ServicioCard = ({ index, titulo, precio, cuotas, imagen, fondocolor, fondoCart }) => {
+const ServicioCard = ({ id, index, titulo, precio, cuotas, imagen, fondocolor, fondoCart }) => {
     return (<>
 
         <section key={index} className={` relative z-40 -translate-y-20 `} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
@@ -12,7 +12,7 @@ const ServicioCard = ({ index, titulo, precio, cuotas, imagen, fondocolor, fondo
             <div className={` absolute top-0 left-0 w-full h-full ${fondocolor} bg-opacity-70 `} />
             <div className={` absolute top-0 left-0 w-full h-full backdrop-grayscale-60 `} />
 
-            <div className={` relative pb-32 pt-40 w-full  `} >
+            <div id={id} className={` relative pb-32 pt-40 w-full  `} >
                 <div className={` relative flex max-w-5xl mx-auto overflow-hidden items-center justify-center transition-all ease-in-out duration-300 `}>
                     <div data-aos-once="true" data-aos='fade' className={` border-solid border-2 border-[#a098b9] border-opacity-30 rounded-2xl font-Raleway p-5 w-80 md:w-[42rem] transition-all ease-in-out duration-300 bg-white bg-opacity-80`} >
 
