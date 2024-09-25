@@ -17,20 +17,20 @@ const Contacto = () => {
           <section className={`relative mx-auto max-w-5xl py-24 text-center text-white`}>
             {/* Título y texto descriptivo */}
             <h2 className={` text-3xl lg:text-4xl font-bold font-RobotoCondensed `}>Contacto</h2>
-            <p className={`mt-4 max-w-3xl mx-auto mb-12 text-lg md:text-xl lg:text-2xl text-justify indent-5 hyphens-auto`} style={{ lineHeight: `1.86` }}>
+            <p className={`mt-4 max-w-3xl mx-auto mb-10 text-lg md:text-xl lg:text-2xl text-justify indent-5 hyphens-auto font-Roboto opacity-80 `} style={{ lineHeight: `1.86` }}>
               Potencie su operación con soluciones a medida: en Latasoft hacemos que su proyecto se adapte a las necesidades únicas de su negocio, llevándolo al siguiente nivel de eficiencia y productividad.
             </p>
             {/* Botón de contacto */}
-            <div className={`mt-8 mb-16`}>
+            <div className={`mt-8 mb-36`}>
               <button className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg transition-all ease-in-out duration-300 `}>
                 Contáctanos
               </button>
             </div>
   
             {/* Iconos de contacto directo */}
-            <div className={`mt-16`}>
+            <div className={`mb-16`}>
               <h3 className={` text-3xl lg:text-4xl font-bold mt-16 mb-8 font-RobotoCondensed `}>Hablemos directamente</h3>
-              <div className={`flex justify-between items-center max-w-3xl mx-auto`}>
+              <div className={`flex justify-between items-center max-w-xl mx-auto`}>
                 <div className={``}>
                   <img src={whatsappIcon.src} alt="WhatsApp" className={`w-auto h-16`} />
                 </div>
