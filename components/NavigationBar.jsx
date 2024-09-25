@@ -6,7 +6,7 @@ const navItems = [
   { linkText: 'Inicio', href: '/' },
   { linkText: 'Servicios', href: '/servicios' },
   { linkText: 'Portafolio', href: '/' },
-  { linkText: 'Quienes somos', href: '/' },
+  { linkText: 'Quienes somos', href: '/nosotros' },
   { linkText: 'Contacto', href: '/' }
 ];
 
