@@ -74,7 +74,7 @@ const Inicio = () => {
               Latasoft - Desarrollo Web y Móvil
             </h2>
             <p className={`mt-5 max-w-3xl mx-auto mb-12 text-lg md:text-xl lg:text-2xl text-justify indent-5 hyphens-auto italic font-NotoSerif`}>
-              "Tu idea es nuestro código fuente"
+              Tu idea es nuestro código fuente
             </p>
             <button className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg`}>
               Saber más
@@ -113,7 +113,7 @@ const Inicio = () => {
         </div>
       </section>
 
-      {/* Nueva sección de "Sobre Nosotros" y "Testimonios" */}
+      {/* sección de "Sobre Nosotros" y "Testimonios" */}
 <section className={`relative py-16 px-6`}>
   <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/empresa-fondo.jpg')]`} />
   <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-90`} />
@@ -133,7 +133,7 @@ const Inicio = () => {
       <div>
         <h3 className={`font-bold mb-7 text-2xl text-[rgb(255,255,0)]`}>Testimonios</h3>
         <p className={`text-lg italic font-NotoSerif`}>
-          "Dejando una huella con cada cliente"
+          Dejando una huella con cada cliente
         </p>
       </div>
     </div>
