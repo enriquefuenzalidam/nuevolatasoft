@@ -2,6 +2,19 @@
 import { useEffect, useState } from 'react';
 
 const Portafolio = () => {
+
+    const logos = [
+        { name: "Empresa 1", image: "/images/logo1.webp" },
+        { name: "Empresa 2", image: "/images/logo2.webp" },
+        { name: "Empresa 3", image: "/images/logo3.webp" },
+        { name: "Empresa 4", image: "/images/logo4.webp" },
+        { name: "Empresa 5", image: "/images/logo5.webp" },
+        { name: "Empresa 6", image: "/images/logo6.webp" },
+        { name: "Empresa 7", image: "/images/logo7.webp" },
+        { name: "Empresa 8", image: "/images/logo8.webp" },
+        { name: "Empresa 9", image: "/images/logo9.webp" },
+        { name: "Empresa 10", image: "/images/logo10.webp" }
+      ];
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slides = [
@@ -203,33 +216,34 @@ const Portafolio = () => {
                 </div>
             </section>
 
-            {/* Nueva Sección de Tarjetas */}
-            <section className={`py-12 bg-slate-50`}>
-                <div className={`container mx-auto text-center max-w-7xl`}>
-                    <h2 className={`text-3xl lg:text-4xl font-bold text-[rgb(29,29,29)] font-RobotoCondensed mb-8`}>
-                        Portafolio
-                    </h2>
-                    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4`}>
-                        {portafolioCards.map((card, index) => (
-                            <div key={index} className={`bg-[#292929] rounded-lg shadow-lg overflow-hidden`}>
-                                <img src={card.image} alt={`Tarjeta ${index + 1}`} className={`w-full h-96 object-cover`} />
-                                <div className={`p-2`}>
-                                    <p className={`text-[rgb(255,255,0)] mb-2`}>{card.description}</p>
-                                    <a href={card.link} target="_blank" rel="noopener noreferrer" className={`text-white hover:underline`}>
-                                        Ver página
-                                    </a>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-            <section className="bg-gray-900 text-white py-12">
-                <div className="container mx-auto text-center">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-yellow-500 font-RobotoCondensed">
+            {/* Sección de Tarjetas */}
+<section className={`py-12 bg-slate-50`}>
+  <div className={`container mx-auto text-center max-w-7xl px-4 sm:px-6 lg:px-8`}>
+    <h2 className={`text-3xl lg:text-4xl font-bold text-[rgb(29,29,29)] font-RobotoCondensed mb-8`}>
+      Portafolio
+    </h2>
+    
+    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`}>
+      {portafolioCards.map((card, index) => (
+        <div key={index} className={`bg-[#292929] rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105`}>
+          <img src={card.image} alt={`Tarjeta ${index + 1}`} className={`w-full h-64 md:h-80 object-cover`} />
+          <div className={`p-4`}>
+            <p className={`text-[rgb(255,255,0)] mb-2`}>{card.description}</p>
+            <a href={card.link} target="_blank" rel="noopener noreferrer" className={`text-white hover:underline`}>
+              Ver página
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+            <section className={`bg-gray-900 text-white py-12`}>
+                <div className={`container mx-auto text-center`}>
+                    <h2 className={`text-3xl lg:text-4xl font-bold text-yellow-500 font-RobotoCondensed`}>
                         Algunas Apps que realizamos
                     </h2>
-                    <p className="text-lg mt-4">Explora algunos de nuestros desarrollos de aplicaciones moviles a continuación.</p>
+                    <p className={`text-lg mt-4`}>Explora algunos de nuestros desarrollos de aplicaciones moviles a continuación.</p>
                 </div>
             </section>
             <section className={`relative py-60 text-white`}>
@@ -253,11 +267,26 @@ const Portafolio = () => {
                 alt={`Slide ${index + 1}`}
                 className={`mx-auto w-48 h-auto object-contain`}
               />
-              <h2 className="text-center mt-4 text-2xl font-bold">{item.title}</h2>
+              <h2 className={`text-center mt-4 text-2xl font-bold`}>{item.title}</h2>
             </div>
           ))}
         </div>
       )}
+    </section>
+    <section className={`relative py-12 bg-gray-800 text-start`}>
+      <h2 className={`max-w-5xl mx-10 text-2xl font-bold mb-8`}>Organizaciones que confían en nosotros</h2>
+      
+      <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-center px-6`}>
+        {logos.map((logo, index) => (
+          <div key={index} className={`flex justify-center items-center`}>
+            <img
+              src={logo.image}
+              alt={logo.name}
+              className={`w-24 h-24 object-contain`}
+            />
+          </div>
+        ))}
+      </div>
     </section>
         </>
     );
