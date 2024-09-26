@@ -11,7 +11,7 @@ import icono6 from 'public/images/e-commerceapp.png';
 
 const Inicio = () => {
   const porquenosotros = [
-    { icono: icono1, titulo: 'Intranet' },
+    { icono: icono1, titulo: 'Proovedores' },
     { icono: icono2, titulo: 'Desarrollo de aplicaciones móviles' },
     { icono: icono3, titulo: 'Diseño de páginas web' },
     { icono: icono4, titulo: 'Base de datos' },
