@@ -44,10 +44,31 @@ const Portafolio = () => {
         { image: "/images/link3.png", description: "Soap ayuda", link: "https://soapayuda.cl" },
         { image: "/images/link4.png", description: "Seguro obligatorio", link: "https://Seguroobligatorio.cl" },
         { image: "/images/link5.png", description: "WokPanda", link: "https://Wokpanda.netlify.app" },
-        { image: "/images/link6.png", description: "Descripción de Tarjeta 6", link: "https://Identitycampus.com" },
-        { image: "/images/link7.png", description: "Descripción de Tarjeta 7", link: "https://www.proyecta.cl/" },
-        { image: "/images/link8.png", description: "Descripción de Tarjeta 8", link: "https://Surmodel.cl" },
-        { image: "/images/link9.png", description: "Descripción de Tarjeta 9", link: "https://fuerzadeventas.netlify.app" }
+        { image: "/images/link6.png", description: "Identity Campus", link: "https://Identitycampus.com" },
+        { image: "/images/link7.png", description: "Proyecta", link: "https://www.proyecta.cl/" },
+        { image: "/images/link8.png", description: "Sur model", link: "https://Surmodel.cl" },
+        { image: "/images/link9.png", description: "Fuerza de ventas", link: "https://fuerzadeventas.netlify.app" },
+        { image: "/images/link10.png", description: "Interagro", link: "https://Interagro.cl" },
+        { image: "/images/link11.png", description: "Frivasa", link: "https://Frivasa.com.br" },
+        { image: "/images/link12.png", description: "Pontofrio", link: "https://Pontofrio.com" },
+        { image: "/images/link13.png", description: "Cepcon", link: "https://Cepcon.cl" },
+        { image: "/images/link14.png", description: "Impulso 360", link: "https://Impulso-360.cl" },
+        { image: "/images/link15.png", description: "Total medios Chile", link: "https://Totalmedioschile.cl" },
+        { image: "/images/link16.png", description: "SoftwareYa", link: "https://Softwareya.cl" },
+        { image: "/images/link17.png", description: "Impulso Venta", link: "https://Impulsoventa.netlify.app" },
+        { image: "/images/link18.png", description: "Tus negocios al día", link: "https://www.tusnegociosaldia.online" },
+        { image: "/images/link19.png", description: "Invierte en terrenos", link: "https://invierteenterrenos.onrender.com/" },
+        { image: "/images/link20.png", description: "Vimerzion", link: "https://Vimerzion.com" },
+        { image: "/images/link21.png", description: "Nobletime", link: "https://nobletime.com" },
+        { image: "/images/link22.png", description: "Publicityads", link: "https://publicityads--google-partner--meta-ads--linkedin-1.webnode.cl/" },
+        { image: "/images/link23.png", description: "Desarrollatcs", link: "https://www.desarrollatcs.es/" },
+        { image: "/images/link24.png", description: "Gruas Rodrigo Rios", link: "https://gruasrodrigorios.netlify.app/" },
+        { image: "/images/link25.png", description: "Invchincol", link: "https://invchincol-com.webnode.cl/" },
+        { image: "/images/link26.png", description: "Dominion", link: "https://dominion-cs.com/es" },
+        { image: "/images/link27.png", description: "Vision Trade Forex", link: "https://visiontradeforex.com/" },
+        { image: "/images/link28.png", description: "Ton ORG", link: "https://ton.org/es/toncoin" },
+        { image: "/images/link29.png", description: "Estating", link: "https://Estating.es" },
+    
     ];
 
     useEffect(() => {
@@ -173,7 +194,7 @@ const Portafolio = () => {
             {/* Nueva Sección de Tarjetas */}
             <section className={`py-12 bg-slate-50`}>
                 <div className={`container mx-auto text-center max-w-7xl`}>
-                    <h2 className={`text-3xl lg:text-4xl font-bold text-[rgb(255,255,0)] font-RobotoCondensed mb-8`}>
+                    <h2 className={`text-3xl lg:text-4xl font-bold text-[rgb(29,29,29)] font-RobotoCondensed mb-8`}>
                         Portafolio
                     </h2>
                     <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4`}>
@@ -183,7 +204,7 @@ const Portafolio = () => {
                                 <div className={`p-2`}>
                                     <p className={`text-[rgb(255,255,0)] mb-2`}>{card.description}</p>
                                     <a href={card.link} target="_blank" rel="noopener noreferrer" className={`text-white hover:underline`}>
-                                        Ver Proyecto
+                                        Ver página
                                     </a>
                                 </div>
                             </div>
