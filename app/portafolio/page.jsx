@@ -37,6 +37,18 @@ const Portafolio = () => {
         // Agrega más proyectos según sea necesario
     ];
 
+    const appSlides = [
+        { title: "Delfos ERP", image: "/images/app1.png" },
+        { title: "Pizza hut", image: "/images/app2.png" },
+        { title: "Findbox", image: "/images/app3.png" },
+        { title: "Surmodel", image: "/images/app3.png" },
+        { title: "Snack App", image: "/images/app3.png" },
+        { title: "SaludYa", image: "/images/app3.png" },
+        { title: "Arenas y cayo", image: "/images/app3.png" },
+        { title: "Barrio + F", image: "/images/app3.png" },
+        // Agrega más proyectos según sea necesario
+    ];
+
     // Nueva constante para las tarjetas
     const portafolioCards = [
         { image: "/images/link1.png", description: "Autodraft", link: "https://autodraft.netlify.app" },
@@ -74,7 +86,7 @@ const Portafolio = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % projectSlides.length); // Cambia el slide del segundo slider
-        }, 3000); // Cambia el slide cada 3 segundos
+        }, 5000); // Cambia el slide cada 3 segundos
 
         return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
     }, [projectSlides.length]);
@@ -82,7 +94,7 @@ const Portafolio = () => {
     return (
         <>
             {/* Sección "Gracias por confiar en nosotros" */}
-            <section className={`flex items-center justify-center h-60 bg-[#292929]`}>
+            <section className={`flex items-center justify-center h-60 bg-gray-900`}>
                 <h2 className={`text-3xl mt-10 lg:text-4xl transition-all ease-in-out duration-200 font-bold font-RobotoCondensed text-[rgb(255,255,0)]`}>
                     Gracias por confiar en nosotros.
                 </h2>
@@ -138,7 +150,7 @@ const Portafolio = () => {
                 </div>
             </section>
 
-            <section className={`bg-gray-800 py-12`}>
+            <section className={`bg-gray-900 py-12`}>
                 <div className={`container mx-auto text-center`}>
                     <h2 className={`text-3xl lg:text-4xl font-bold text-[rgb(255,255,0)] font-RobotoCondensed`}>
                         Proyectos Destacados
@@ -212,6 +224,41 @@ const Portafolio = () => {
                     </div>
                 </div>
             </section>
+            <section className="bg-gray-900 text-white py-12">
+                <div className="container mx-auto text-center">
+                    <h2 className="text-3xl lg:text-4xl font-bold text-yellow-500 font-RobotoCondensed">
+                        Algunas Apps que realizamos
+                    </h2>
+                    <p className="text-lg mt-4">Explora algunos de nuestros desarrollos de aplicaciones moviles a continuación.</p>
+                </div>
+            </section>
+            <section className={`relative py-60 text-white`}>
+      {/* Fondo */}
+      <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/celulares-fondo.jpg')]`} />
+      <div className={`absolute top-0 left-0 w-full h-full bg-yellow-500 bg-opacity-90`} />
+      <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-20`} />
+
+      {/* Slider de imágenes */}
+      {!!appSlides?.length && (
+        <div className={`relative max-w-4xl mx-auto block w-full h-full`}>
+          {appSlides.map((item, index) => (
+            <div
+              key={index}
+              className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-auto h-auto ${
+                currentSlide === index ? 'opacity-100' : 'opacity-0'
+              } transition-opacity ease-in-out duration-700`}
+            >
+              <img
+                src={item.image}
+                alt={`Slide ${index + 1}`}
+                className={`mx-auto w-48 h-auto object-contain`}
+              />
+              <h2 className="text-center mt-4 text-2xl font-bold">{item.title}</h2>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
         </>
     );
 };
