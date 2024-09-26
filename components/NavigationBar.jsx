@@ -5,7 +5,7 @@ import Scrollhandling from 'components/Scrollhandling';
 const navItems = [
   { linkText: 'Inicio', href: '/inicio' },
   { linkText: 'Servicios', href: '/servicios' },
-  { linkText: 'Portafolio', href: '/' },
+  { linkText: 'Portafolio', href: '/portafolio' },
   { linkText: 'Quienes somos', href: '/nosotros' },
   { linkText: 'Contacto', href: '/contacto' }
 ];
