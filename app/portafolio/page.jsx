@@ -3,6 +3,10 @@ import { useEffect, useState } from 'react';
 
 const Portafolio = () => {
 
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentProjectSlide, setCurrentProjectSlide] = useState(0);
+    const [currentAppSlide, setCurrentAppSlide] = useState(0);
+
     const logos = [
         { name: "Empresa 1", image: "/images/logo1.webp" },
         { name: "Empresa 2", image: "/images/logo2.webp" },
@@ -15,7 +19,7 @@ const Portafolio = () => {
         { name: "Empresa 9", image: "/images/logo9.webp" },
         { name: "Empresa 10", image: "/images/logo10.webp" }
       ];
-    const [currentSlide, setCurrentSlide] = useState(0);
+    
 
     const slides = [
         { image: "/images/cliente0.png" },
@@ -44,9 +48,9 @@ const Portafolio = () => {
 
     // Nueva constante para el segundo slider
     const projectSlides = [
-        { title: "Salud Ya", description: "Salud ya es una aplicación móvil...(ejemplo de función del slider)", image: "/images/Saludya-ejemplo.webp" },
-        { title: "Salud Ya2", description: "Salud ya es una aplicación móvil...", image: "/images/Saludya-ejemplo.webp" },
-        { title: "Salud Ya3", description: "Salud ya es una aplicación móvil...", image: "/images/Saludya-ejemplo.webp" }
+        { title: "SoapAyuda", description: "Soap ayuda en una plataforma web...", image: "/images/link3.png" },
+        { title: "SoftwareYA", description: "Software ya es una pagina web que...", image: "/images/link16.png" },
+        { title: "Salud Ya", description: "Salud ya es una aplicación móvil que ayuda...", image: "/images/app6.png" }
         // Agrega más proyectos según sea necesario
     ];
 
@@ -54,11 +58,11 @@ const Portafolio = () => {
         { title: "Delfos ERP", image: "/images/app1.png" },
         { title: "Pizza hut", image: "/images/app2.png" },
         { title: "Findbox", image: "/images/app3.png" },
-        { title: "Surmodel", image: "/images/app3.png" },
-        { title: "Snack App", image: "/images/app3.png" },
-        { title: "SaludYa", image: "/images/app3.png" },
-        { title: "Arenas y cayo", image: "/images/app3.png" },
-        { title: "Barrio + F", image: "/images/app3.png" },
+        { title: "Surmodel", image: "/images/app4.png" },
+        { title: "Snack App", image: "/images/app5.png" },
+        { title: "SaludYa", image: "/images/app6.png" },
+        { title: "Arenas y cayo", image: "/images/app7.png" },
+        { title: "Barrio + F", image: "/images/app8.png" },
         // Agrega más proyectos según sea necesario
     ];
 
@@ -96,13 +100,29 @@ const Portafolio = () => {
     
     ];
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % projectSlides.length); // Cambia el slide del segundo slider
-        }, 5000); // Cambia el slide cada 3 segundos
+   // Intervalo para el slider de imágenes principales
+   useEffect(() => {
+    const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length); // Avanza entre las 21 imágenes
+    }, 3000); // Cambia de imagen cada 3 segundos
+    return () => clearInterval(interval);
+}, [slides.length]);
 
-        return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
-    }, [projectSlides.length]);
+// Intervalo para el slider de proyectos
+useEffect(() => {
+    const interval = setInterval(() => {
+        setCurrentProjectSlide((prev) => (prev + 1) % projectSlides.length);
+    }, 5000); // Cambia de proyecto cada 5 segundos
+    return () => clearInterval(interval);
+}, [projectSlides.length]);
+
+// Intervalo para el slider de aplicaciones
+useEffect(() => {
+    const interval = setInterval(() => {
+        setCurrentAppSlide((prev) => (prev + 1) % appSlides.length);
+    }, 4000); // Cambia de app cada 4 segundos
+    return () => clearInterval(interval);
+}, [appSlides.length]);
 
     return (
         <>
@@ -171,7 +191,7 @@ const Portafolio = () => {
                 </div>
             </section>
 
-            {/* Nueva Sección Slider con texto e imagen */}
+            {/* Slider de proyectos Destacados */}
             <section className={`relative py-40 text-white`}>
                 <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/proyecto-fondo.jpg')]`} />
                 <div className={`absolute top-0 left-0 w-full h-full bg-white bg-opacity-20`} />
@@ -182,7 +202,7 @@ const Portafolio = () => {
                     <div className={`flex flex-col items-center md:items-start text-center md:text-left p-4 md:p-0`}>
                         {!!projectSlides?.length && (
                             projectSlides.map((item, index) => (
-                                <div key={index} className={`${currentSlide === index ? 'block' : 'hidden'} transition-all ease-in-out duration-700`}>
+                                <div key={index} className={`${currentProjectSlide === index ? 'block' : 'hidden'} transition-all ease-in-out duration-700`}>
                                     <h3 className={`text-3xl lg:text-4xl font-bold mb-4 text-yellow-500 font-RobotoCondensed`}>
                                         {item.title}
                                     </h3>
@@ -201,13 +221,13 @@ const Portafolio = () => {
                                 <div
                                     key={index}
                                     className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-auto h-auto ${
-                                        currentSlide === index ? 'opacity-100' : 'opacity-0'
+                                        currentProjectSlide === index ? 'opacity-100' : 'opacity-0'
                                     } transition-opacity ease-in-out duration-700`}
                                 >
                                     <img
                                         src={item.image}
                                         alt={`Imagen del Proyecto ${index + 1}`}
-                                        className={`mx-auto w-64 h-auto object-contain`} // Ajustar tamaño de la imagen
+                                        className={`mx-auto w-40 h-auto object-contain`} // Ajustar tamaño de la imagen
                                     />
                                 </div>
                             ))
@@ -252,14 +272,14 @@ const Portafolio = () => {
       <div className={`absolute top-0 left-0 w-full h-full bg-yellow-500 bg-opacity-90`} />
       <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-20`} />
 
-      {/* Slider de imágenes */}
+      {/* Slider de aplicaciones */}
       {!!appSlides?.length && (
         <div className={`relative max-w-4xl mx-auto block w-full h-full`}>
           {appSlides.map((item, index) => (
             <div
               key={index}
               className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-auto h-auto ${
-                currentSlide === index ? 'opacity-100' : 'opacity-0'
+                currentAppSlide === index ? 'opacity-100' : 'opacity-0'
               } transition-opacity ease-in-out duration-700`}
             >
               <img
