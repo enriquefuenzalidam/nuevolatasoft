@@ -93,6 +93,7 @@ const Servicios = () => {
             titulo: 'Diseño web',
             precio: '$ 220.000 IVA incluido',
             cuotas: '(Hasta 3 cuotas)',
+            descripcion: 'Prediseño y maquetado web en figma, puede ser landingpage u página web. Vinculación a dominio, hosting, correo corporativo y base de datos propia en Firebase. Prueba de ciberseguridad y lanzamiento web. Prueba de velocidad de la página. Web responsiva (adaptada a cualquier dispositivo). Fivecon de la empresa. Web diseñada hasta 4 pestañas. Carpeta del proyecto con repositorio web. Copia de seguridad de la web final. Sello SSL (Candado verde de ciberseguridad). Soporte web 24/7 x1 año gratis. Hosting gratis x1 año. Chatbot web u botón de whatsApp al costado. Posicionamiento SEO en la web con RankingCoach.',
             imagen: imagenServicios01
         },
         {
@@ -102,13 +103,15 @@ const Servicios = () => {
             titulo: 'Tienda online',
             precio: '$ 220.000 IVA incluido',
             cuotas: '(Hasta 3 cuotas)',
+            descripcion: 'Análisis del requerimiento del cliente. Definición de la estructura y funcionalidad requerida. Prediseño y Maquetado en Figma (adaptado a la imagen de marca). Ecommerce responsivo. Integración de elementos visuales y gráficos Carga inicial hasta 30 productos (imágenes, descripciones, precios). Creación de categorías de productos. Configuración de variaciones de producto (tamaño, color, etc). Integración de carrito de compras. Configuración de métodos de pagos (PayPal, webpay, transferencia bancaria, mercado pago, otros). Configuración de métodos de envíos (nacionales e internacionales). Integración de seguimiento de pedidos u notificaciones al cliente. Registro de usuarios y clientes con base de datos propia. Creación de cuentas de usuario (opcional). Gestión de perfiles de clientes y pedidos. Configuración SEO para cada página y producto. Integración de Google Analytics para seguimiento web. Certificado SSL (candado verde al lado del dominio web). Pruebas de funcionalidad (carrito, pagos, envíos, etc). Conexión con redes sociales (Facebook e instagram shop). Capacitación básica de uso de la tienda (gestión de productos, pedidos y clientes). Soporte técnico durante el 1 mes después del lanzamiento',
             imagen: imagenServicios01
         },
         {
             id: 'intranet',
             fondoCart: serviciosbgC,
             fondocolor: 'bg-[#000000]',
-            titulo: 'Intranet',
+            titulo: 'Proovedores para agencias de marketing',
+            descripcion: 'En Latasoft, somos el socio ideal para agencias de marketing que buscan externalizar servicios de diseño web y creación de tiendas online. Nuestro equipo de expertos ofrece soluciones a medida para que tu agencia pueda enfocarse en lo que mejor hace: estrategia, branding y publicidad, mientras nosotros nos encargamos detodo lo técnico. Diseño Web Personalizado. Desarrollo de Tiendas Online. Entrega Puntual. Soporte Técnico.Colaboración Transparente. ¿Por qué Elegirnos como Tu Proveedor?. Experiencia y Calidad Garantizada: Más de X años en el mercado con una amplia experiencia en distintos sectores. Flexibilidad: Nos adaptamos a las necesidades y tiempos de tu agencia, ofreciendo soluciones personalizadas a la medida de cada cliente. Precios Competitivos: Ofrecemos precios preferenciales para agencias, permitiéndote obtener un margen de beneficio sin sacrificar la calidad. Si estás buscando un aliado confiable para el desarrollo web y ecommerce, contáctanos y juntos llevaremos a tusclientes al siguiente nivel digital. Enfócate en lo tuyo, nosotros nos encargamos del resto.',
             imagen: imagenServicios01
         },
         {
@@ -117,6 +120,7 @@ const Servicios = () => {
             fondocolor: 'bg-[#613DD2]',
             titulo: 'Desarrollo de Apps',
             precio: '$3.500.000 IVA incluido',
+            descripcion: 'Evaluación de requisitos y funcionalidades de la app. Definir alcance, características clave y flujo de trabajo de la app. Prediseño y Maquetado en Figma con interfaces intuitivas para la experiencia de usuario. Creación de prototipo y wireframes para visualizar app antes del desarrollo. App responsiva. Programación de la app en Swift para IOS y kotlin/java para Android Desarrollo de funciones personalizadas según cliente. Integración con Apis y servicios externos. Gestión de base de datos local o en la nube para almacenamiento de datos. Integración de sistemas de autenticacion (correos, etc). Medidas de seguridad avanzadas (cifrado de datos, HTTPS, políticas de privacidad). Gestión de roles y permisos para diferentes tipos de usuario (administradores, usuarios, etc). Integración de pasarelas de pagos (PayPal, webpay, Google Pay/Apple Pay u otros). Configuración para compras dentro de la app u suscripciones. Notificaciones Push. Geolocalizacion (si aplica) Cámara y multimedia (si aplica). Chat en tiempo real. Pruebas de optimizacion y rendimiento. Detección y corrección de bugs antes del lanzamiento. Validación de la app en situaciones reales de uso. Publicación en tiendas de Apps. Capacitación y documentación al cliente del uso de la app. Soporte post lanzamiento x3 meses después del lanzamiento (con posibles nuevas actualizaciones)',
             cuotas: '(Hasta 5 cuotas $700.000 (IVA incluido)',
             imagen: imagenServicios01
         },
@@ -125,7 +129,7 @@ const Servicios = () => {
             fondoCart: serviciosbgB,
             fondocolor: 'bg-[#FFFFFF]',
             titulo: 'Venta y suscripción de software',
-            cuotas: 'Puedes comprar o suscribir un software como tambien puedes vender o suscribir tu software si lo prefieres.',
+            descripcion: 'Puedes comprar o suscribir un software como tambien puedes vender o suscribir tu software si lo prefieres.',
             imagen: imagenServicios01
         },
         {
@@ -133,7 +137,7 @@ const Servicios = () => {
             fondoCart: serviciosbgB,
             fondocolor: 'bg-[#00FFFF]',
             titulo: 'Venta de base de datos',
-            cuotas: 'Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.',
+            descripcion: 'Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.',
             imagen: imagenServicios01
         }
     ];
@@ -193,6 +197,7 @@ const Servicios = () => {
                             titulo={item.titulo}
                             precio={item.precio}
                             cuotas={item.cuotas}
+                            descripcion={item.descripcion}
                             imagen={item.imagen} />
                     ))}
                 </>
