@@ -1,5 +1,6 @@
 "use client"; // Marcar el componente como Client Component
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 
 import icono1 from 'public/images/des-intranet.png';
@@ -76,15 +77,16 @@ const Inicio = () => {
             <p className={`mt-5 max-w-3xl mx-auto mb-12 text-lg md:text-xl lg:text-2xl text-justify indent-5 hyphens-auto italic font-NotoSerif`}>
               Tu idea es nuestro código fuente
             </p>
-            <button className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg`}>
-              Saber más
-            </button>
+            <Link href="/servicios">
+      <button className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg`}>
+        Saber más
+      </button>
+    </Link>
           </div>
 
           <div className={`flex items-center justify-center text-center text-white h-[20%] px-8`}>
             <p className={`mt-5 max-w-4xl mx-auto mb-12 text-lg md:text-xl lg:text-xl indent-5 hyphens-auto`}>
-              Marcando huellas de progreso con oficinas y laboratorios desde la V Región hasta la VII Región y en Argentina, Uruguay y Brasil.
-            </p>
+            En Latasoft estamos orgullosos de ofrecer nuestros servicios para gran parte de Hispanoamerica, cada cliente es un pilar en nuestro día a dia            </p>
           </div>
         </div>
       </section>

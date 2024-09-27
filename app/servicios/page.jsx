@@ -51,8 +51,8 @@ const Servicios = () => {
             id: 'intranet',
             icono: serviciosIconoA,
             color: 'p',
-            titulo: 'Intranet',
-            texto: 'La intranet fortalece la comunicación interna, centraliza la información, facilita la colaboración y aumenta la eficiencia operativa interna de la empresa.'
+            titulo: 'Proovedores para agencias de marketing',
+            texto: 'Encuentra los mejores servicios de desarrollo web y aplicaciones móviles para impulsar las estrategias digitales de tu agencia de marketing. Ofrecemos soluciones tecnológicas a medida para satisfacer las necesidades de tus clientes, con equipos especializados que garantizan resultados eficientes y de alta calidad.'
         },
         {
             id: 'disegno',
