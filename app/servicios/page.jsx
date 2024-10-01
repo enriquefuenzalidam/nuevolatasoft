@@ -109,7 +109,7 @@ const Servicios = () => {
         {
             id: 'intranet',
             fondoCart: serviciosbgC,
-            fondocolor: 'bg-[#000000]',
+            fondocolor: 'bg-[#00FFFF]',
             titulo: 'Proovedores para agencias de marketing',
             descripcion: 'En Latasoft, somos el socio ideal para agencias de marketing que buscan externalizar servicios de diseño web y creación de tiendas online. Nuestro equipo de expertos ofrece soluciones a medida para que tu agencia pueda enfocarse en lo que mejor hace: estrategia, branding y publicidad, mientras nosotros nos encargamos detodo lo técnico. Diseño Web Personalizado. Desarrollo de Tiendas Online. Entrega Puntual. Soporte Técnico.Colaboración Transparente. ¿Por qué Elegirnos como Tu Proveedor?. Experiencia y Calidad Garantizada: Más de X años en el mercado con una amplia experiencia en distintos sectores. Flexibilidad: Nos adaptamos a las necesidades y tiempos de tu agencia, ofreciendo soluciones personalizadas a la medida de cada cliente. Precios Competitivos: Ofrecemos precios preferenciales para agencias, permitiéndote obtener un margen de beneficio sin sacrificar la calidad. Si estás buscando un aliado confiable para el desarrollo web y ecommerce, contáctanos y juntos llevaremos a tusclientes al siguiente nivel digital. Enfócate en lo tuyo, nosotros nos encargamos del resto.',
             imagen: imagenServicios01
@@ -135,7 +135,7 @@ const Servicios = () => {
         {
             id: 'basededatos',
             fondoCart: serviciosbgB,
-            fondocolor: 'bg-[#00FFFF]',
+            fondocolor: 'bg-[#000000]',
             titulo: 'Venta de base de datos',
             descripcion: 'Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.',
             imagen: imagenServicios01

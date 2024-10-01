@@ -15,11 +15,11 @@ const Portafolio = () => {
         { name: "Empresa 5", image: "/images/logo5.webp" },
         { name: "Empresa 6", image: "/images/logo6.webp" },
         { name: "Empresa 7", image: "/images/logo7.webp" },
-        { name: "Empresa 8", image: "/images/logo8.webp" },
+        { name: "Empresa 8", image: "/images/logo8.png" },
         { name: "Empresa 9", image: "/images/logo9.webp" },
         { name: "Empresa 10", image: "/images/logo10.webp" }
-      ];
-    
+    ];
+
 
     const slides = [
         { image: "/images/cliente0.png" },
@@ -97,217 +97,168 @@ const Portafolio = () => {
         { image: "/images/link27.png", description: "Vision Trade Forex", link: "https://visiontradeforex.com/" },
         { image: "/images/link28.png", description: "Ton ORG", link: "https://ton.org/es/toncoin" },
         { image: "/images/link29.png", description: "Estating", link: "https://Estating.es" },
-    
+
     ];
 
-   // Intervalo para el slider de imágenes principales
-   useEffect(() => {
-    const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length); // Avanza entre las 21 imágenes
-    }, 3000); // Cambia de imagen cada 3 segundos
-    return () => clearInterval(interval);
-}, [slides.length]);
+    // Intervalo para el slider de imágenes principales
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length); // Avanza entre las 21 imágenes
+        }, 3000); // Cambia de imagen cada 3 segundos
+        return () => clearInterval(interval);
+    }, [slides.length]);
 
-// Intervalo para el slider de proyectos
-useEffect(() => {
-    const interval = setInterval(() => {
-        setCurrentProjectSlide((prev) => (prev + 1) % projectSlides.length);
-    }, 5000); // Cambia de proyecto cada 5 segundos
-    return () => clearInterval(interval);
-}, [projectSlides.length]);
+    // Intervalo para el slider de proyectos
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentProjectSlide((prev) => (prev + 1) % projectSlides.length);
+        }, 5000); // Cambia de proyecto cada 5 segundos
+        return () => clearInterval(interval);
+    }, [projectSlides.length]);
 
-// Intervalo para el slider de aplicaciones
-useEffect(() => {
-    const interval = setInterval(() => {
-        setCurrentAppSlide((prev) => (prev + 1) % appSlides.length);
-    }, 4000); // Cambia de app cada 4 segundos
-    return () => clearInterval(interval);
-}, [appSlides.length]);
+    // Intervalo para el slider de aplicaciones
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentAppSlide((prev) => (prev + 1) % appSlides.length);
+        }, 4000); // Cambia de app cada 4 segundos
+        return () => clearInterval(interval);
+    }, [appSlides.length]);
 
     return (
         <>
-            {/* Sección "Gracias por confiar en nosotros" */}
-            <section className={`flex items-center justify-center h-60 bg-gray-900`}>
-                <h2 className={`text-3xl mt-10 lg:text-4xl transition-all ease-in-out duration-200 font-bold font-RobotoCondensed text-[rgb(255,255,0)]`}>
-                    Gracias por confiar en nosotros.
-                </h2>
-            </section>
+            <main className={`relative mt-16 `}>
 
-            {/* Sección del Slider */}
-            <section className={`relative h-56`}>
-                <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')]`} />
-                <div className={`absolute top-0 left-0 w-full h-full bg-white bg-opacity-80`} />
-                <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-20`} />
+                {/* Sección "Gracias por confiar en nosotros" */}
+                <section className={`relative pb-40 pt-20 px-8`}>
+                    <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')]`} />
+                    <div className={`absolute top-0 left-0 w-full h-full bg-purple-700 bg-opacity-80`} />
+                    <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-60`} />
 
-                {!!slides?.length && (
-                    <div className={`relative max-w-4xl mx-auto block w-full h-full`}>
-                        {slides.map((item, index) => (
-                            <div
-                                key={index}
-                                className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-auto h-auto ${
-                                    currentSlide === index ? 'opacity-100' : 'opacity-0'
-                                } transition-opacity ease-in-out duration-700`}
-                            >
-                                <img
-                                    src={item.image}
-                                    alt={`Slide ${index + 1}`}
-                                    className={`mx-auto w-36 h-auto object-contain`}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </section>
-
-            {/* Nueva Sección con los tres textos */}
-            <section className={`bg-purple-700 text-white py-12`}>
-                <div className={`container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 text-center`}>
-                    {/* Texto 1 */}
-                    <div className={`flex justify-center items-center`}>
-                        <h3 className={`text-2xl lg:text-5xl font-light font-RobotoCondensed`}>
-                            +5 Años de experiencia
-                        </h3>
-                    </div>
-                    {/* Texto 2 */}
-                    <div className={`flex justify-center items-center`}>
-                        <h3 className={`text-2xl lg:text-5xl font-light font-RobotoCondensed`}>
-                            +30 Webs creadas
-                        </h3>
-                    </div>
-                    {/* Texto 3 */}
-                    <div className={`flex justify-center items-center`}>
-                        <h3 className={`text-2xl lg:text-5xl font-light font-RobotoCondensed`}>
-                            +10 Apps creadas
-                        </h3>
-                    </div>
-                </div>
-            </section>
-
-            <section className={`bg-gray-900 py-12`}>
-                <div className={`container mx-auto text-center`}>
-                    <h2 className={`text-3xl lg:text-4xl font-bold text-[rgb(255,255,0)] font-RobotoCondensed`}>
-                        Proyectos Destacados
+                    <h2 data-aos-once="true" data-aos='fade' className={`relative text-3xl lg:text-4xl w-full text-center font-bold font-RobotoCondensed text-white transition-all ease-in-out duration-200 text-opacity-80 `}>
+                        Gracias por confiar en nosotros
                     </h2>
-                </div>
-            </section>
-
-            {/* Slider de proyectos Destacados */}
-            <section className={`relative py-40 text-white`}>
-                <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/proyecto-fondo.jpg')]`} />
-                <div className={`absolute top-0 left-0 w-full h-full bg-white bg-opacity-20`} />
-                <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-80`} />
-
-                <div className={`relative max-w-5xl container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center`}>
-                    {/* Columna Izquierda: Título y descripción */}
-                    <div className={`flex flex-col items-center md:items-start text-center md:text-left p-4 md:p-0`}>
-                        {!!projectSlides?.length && (
-                            projectSlides.map((item, index) => (
-                                <div key={index} className={`${currentProjectSlide === index ? 'block' : 'hidden'} transition-all ease-in-out duration-700`}>
-                                    <h3 className={`text-3xl lg:text-4xl font-bold mb-4 text-yellow-500 font-RobotoCondensed`}>
-                                        {item.title}
-                                    </h3>
-                                    <p className={`text-lg lg:text-xl font-light text-white mb-8`}> {/* Añadir margen inferior para separación */}
-                                        {item.description}
-                                    </p>
-                                </div>
-                            ))
-                        )}
-                    </div>
-
-                    {/* Columna Derecha: Imagen */}
-                    <div className={`relative`}>
-                        {!!projectSlides?.length && (
-                            projectSlides.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-auto h-auto ${
-                                        currentProjectSlide === index ? 'opacity-100' : 'opacity-0'
-                                    } transition-opacity ease-in-out duration-700`}
-                                >
-                                    <img
-                                        src={item.image}
-                                        alt={`Imagen del Proyecto ${index + 1}`}
-                                        className={`mx-auto w-40 h-auto object-contain`} // Ajustar tamaño de la imagen
+                    {!!slides?.length && (
+                        <div className={`relative max-w-4xl mx-auto block w-full h-60 mt-16 `}>
+                            {slides.map((item, index) => (
+                                <div key={index}
+                                    className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 max-w-xl h-full ${currentSlide === index ? 'opacity-100' : 'opacity-0' } transition-opacity ease-in-out duration-700`} >
+                                    <img src={item.image}
+                                        alt={`Slide ${index + 1}`}
+                                        className={` mx-auto h-full w-auto object-contain `}
                                     />
                                 </div>
-                            ))
-                        )}
+                            ))}
+                        </div>
+                    )}
+                    <div className={`relative max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-center mt-16 gap-6 md:gap-0`}>
+                        {/* Texto 1 */}
+                            <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
+                                <span className={` text-4xl md:text-6xl `}>+5 años</span> <br className={` hidden md:inline `}/> de experiencia
+                            </h3>
+     
+                        {/* Texto 2 */}
+                            <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
+                                <span className={` text-4xl md:text-6xl `}>+30 webs</span> <br className={` hidden md:inline `}/>creadas
+                            </h3>
+     
+                        {/* Texto 3 */}
+                            <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
+                                <span className={` text-4xl md:text-6xl `}>+10 apps</span> <br className={` hidden md:inline `}/>creadas
+                            </h3>
+   
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* Sección de Tarjetas */}
-<section className={`py-12 bg-slate-50`}>
-  <div className={`container mx-auto text-center max-w-7xl px-4 sm:px-6 lg:px-8`}>
-    <h2 className={`text-3xl lg:text-4xl font-bold text-[rgb(29,29,29)] font-RobotoCondensed mb-8`}>
-      Portafolio
-    </h2>
-    
-    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`}>
-      {portafolioCards.map((card, index) => (
-        <div key={index} className={`bg-[#292929] rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105`}>
-          <img src={card.image} alt={`Tarjeta ${index + 1}`} className={`w-full h-64 md:h-80 object-cover`} />
-          <div className={`p-4`}>
-            <p className={`text-[rgb(255,255,0)] mb-2`}>{card.description}</p>
-            <a href={card.link} target="_blank" rel="noopener noreferrer" className={`text-white hover:underline`}>
-              Ver página
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-            <section className={`bg-gray-900 text-white py-12`}>
-                <div className={`container mx-auto text-center`}>
-                    <h2 className={`text-3xl lg:text-4xl font-bold text-yellow-500 font-RobotoCondensed`}>
+                <section className={`relative z-40 -translate-y-20`} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929]`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                </section>
+
+                {/* Sección de Tarjetas */}
+                <section className={` relative bg-slate-50 -mt-48 pb-32 pt-40 px-8 `}>
+
+                    <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/proyecto-fondo-c.jpg')]`} />
+                    <div className={`absolute top-0 left-0 w-full h-full bg-[#00ffff] bg-opacity-70`} />
+                    <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-60`} />
+
+                    <div className={` relative container mx-auto text-center max-w-6xl pt-12 pb-4 sm:pb-6 lg:pb-8 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20 rounded-lg `}>
+                        <h2 data-aos-once="true" data-aos='fade' className={`text-3xl lg:text-4xl font-bold text-[rgb(29,29,29)] font-RobotoCondensed mb-12`}>
+                            Galería
+                        </h2>
+
+                        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 `}>
+                            {portafolioCards.map((card, index) => (
+                                <div key={index} className={` relative overflow-hidden transition-all ease-in-out duration-300 hover:scale-110 md:hover:scale-125 hover:z-40 aspect-[4/2] sm:aspect-[2/3] hover:shadow-lg hover:shadow-[rgba(0,0,0,0.8)] `}>
+                                    <div className={` absolute -top-2 -left-2 w-[110%] h-[110%] bg-cover bg-center `} style={{ backgroundImage: `url('${card.image}')` }} />
+                                    <div className={` relative w-full h-full transition-all ease-linear duration-300 backdrop-grayscale-100 hover:backdrop-grayscale-0 `}>
+                                        <div className={` relative w-full h-full bg-cover bg-center bg-white bg-opacity-40 hover:bg-opacity-0 transition-all ease-linear duration-300 `}>
+                                            <div className={`absolute block bottom-0 left-0 w-full`}>
+                                                <p className={`block bg-black bg-opacity-70 mx-0 pt-4 px-2 text-white text-2xl font-RobotoCondensed font-medium `}>{card.description}</p>
+                                                <p className={`block bg-black bg-opacity-70 mb-0 mx-0 pb-6 px-2 font-medium `} ><a href={card.link} target="_blank" className={`text-white hover:no-underline `}>
+                                                    Ver página</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section className={`relative z-40 -translate-y-20`} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929]`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                </section>
+
+                <section className={`relative -mt-48 pb-32 pt-40 `}>
+
+                    {/* Fondo */}
+                    <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/celulares-fondo.jpg')]`} />
+                    <div className={`absolute top-0 left-0 w-full h-full bg-[#ffff00] bg-opacity-90`} />
+                    <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-50`} />
+
+                    <h2 data-aos-once="true" data-aos='fade' className={`relative mx-auto max-w-5xl text-center text-3xl lg:text-4xl font-bold text-black font-RobotoCondensed `}>
                         Algunas Apps que realizamos
                     </h2>
-                    <p className={`text-lg mt-4`}>Explora algunos de nuestros desarrollos de aplicaciones moviles a continuación.</p>
-                </div>
-            </section>
-            <section className={`relative py-60 text-white`}>
-      {/* Fondo */}
-      <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/celulares-fondo.jpg')]`} />
-      <div className={`absolute top-0 left-0 w-full h-full bg-yellow-500 bg-opacity-90`} />
-      <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-20`} />
+                    <p data-aos-once="true" data-aos='fade' className={`relative mx-auto max-w-5xl text-center text-lg lg:text-xl font-medium text-black font-Roboto mt-2 `}>Explora algunos de nuestros desarrollos de aplicaciones moviles a continuación.</p>
 
-      {/* Slider de aplicaciones */}
-      {!!appSlides?.length && (
-        <div className={`relative max-w-4xl mx-auto block w-full h-full`}>
-          {appSlides.map((item, index) => (
-            <div
-              key={index}
-              className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-auto h-auto ${
-                currentAppSlide === index ? 'opacity-100' : 'opacity-0'
-              } transition-opacity ease-in-out duration-700`}
-            >
-              <img
-                src={item.image}
-                alt={`Slide ${index + 1}`}
-                className={`mx-auto w-48 h-auto object-contain`}
-              />
-              <h2 className={`text-center mt-4 text-2xl font-bold`}>{item.title}</h2>
-            </div>
-          ))}
-        </div>
-      )}
-    </section>
-    <section className={`relative py-12 bg-gray-800 text-start`}>
-      <h2 className={`max-w-5xl mx-10 text-2xl font-bold mb-8`}>Organizaciones que confían en nosotros</h2>
-      
-      <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-center px-6`}>
-        {logos.map((logo, index) => (
-          <div key={index} className={`flex justify-center items-center`}>
-            <img
-              src={logo.image}
-              alt={logo.name}
-              className={`w-24 h-24 object-contain`}
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+                    {/* Slider de aplicaciones */}
+
+                    {!!appSlides?.length && (
+                        <div className={`relative max-w-5xl mx-auto block w-full h-[30rem] mt-6`}>
+                            {appSlides.map((item, index) => (
+                                <div key={index} className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 `} >
+                                    <img src={item.image}
+                                        alt={`${item.title} `}
+                                        className={`mx-auto w-48 h-auto object-contain  ${currentAppSlide === index ? 'opacity-100' : 'opacity-0'} transition-opacity ease-in-out duration-700`} />
+                                    <h4 className={`text-center mt-4 text-3xl font-bold text-black ${currentAppSlide === index ? 'opacity-100' : 'opacity-0'} transition-opacity ease-in-out duration-700 `}>{item.title}</h4>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
+                </section>
+
+                <section className={`relative z-30 -translate-y-20`}> {/*  style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }} */}
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                </section>
+
+                <section className={`relative z-40 -mt-48 bg-gray-800 pb-32 pt-10 `}>
+                    <h2 data-aos-once="true" data-aos='fade' className={`max-w-5xl mx-auto text-3xl lg:text-4xl font-bold font-RobotoCondensed mb-12 text-center opacity-80 `}>Organizaciones que confían en nosotros</h2>
+
+                    {!!logos?.length && (
+                        <div className={`max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 items-center justify-center px-6 lg:px-0`}>
+                            {logos.map((logo, index) => (
+                                <div data-aos-once="true" data-aos='fade' key={index} className={`flex justify-center items-center bg-black aspect-square p-6`}>
+                                    <img
+                                        src={logo.image}
+                                        alt={logo.name}
+                                        className={`w-full h-auto object-contain`}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </section>
+            </main>
         </>
     );
 };
