@@ -129,7 +129,7 @@ const Portafolio = () => {
             <main className={`relative mt-16 `}>
 
                 {/* Sección "Gracias por confiar en nosotros" */}
-                <section className={`relative pb-40 pt-20 px-8`}>
+                <section className={`relative pb-40 pt-24 px-8`}>
                     <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')]`} />
                     <div className={`absolute top-0 left-0 w-full h-full bg-purple-700 bg-opacity-80`} />
                     <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-60`} />
@@ -182,7 +182,7 @@ const Portafolio = () => {
 
                     <div className={` relative container mx-auto text-center max-w-6xl pt-12 pb-4 sm:pb-6 lg:pb-8 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20 rounded-lg `}>
                         <h2 data-aos-once="true" data-aos='fade' className={`text-3xl lg:text-4xl font-bold text-[rgb(29,29,29)] font-RobotoCondensed mb-12`}>
-                            Galería
+                            Proyectos
                         </h2>
 
                         <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 `}>
@@ -192,8 +192,8 @@ const Portafolio = () => {
                                     <div className={` relative w-full h-full transition-all ease-linear duration-300 backdrop-grayscale-100 hover:backdrop-grayscale-0 `}>
                                         <div className={` relative w-full h-full bg-cover bg-center bg-white bg-opacity-40 hover:bg-opacity-0 transition-all ease-linear duration-300 `}>
                                             <div className={`absolute block bottom-0 left-0 w-full`}>
-                                                <p className={`block bg-black bg-opacity-70 mx-0 pt-4 px-2 text-white text-2xl font-RobotoCondensed font-medium `}>{card.description}</p>
-                                                <p className={`block bg-black bg-opacity-70 mb-0 mx-0 pb-6 px-2 font-medium `} ><a href={card.link} target="_blank" className={`text-white hover:no-underline `}>
+                                                <p className={`block bg-black bg-opacity-70 mx-0 pt-4 px-2 text-[#FFFFAA] text-2xl font-RobotoCondensed font-medium `}>{card.description}</p>
+                                                <p className={`block bg-black bg-opacity-70 mb-0 mx-0 pb-6 px-2 font-medium `} ><a href={card.link} target="_blank" className={`text-white hover:underline `}>
                                                     Ver página</a></p>
                                             </div>
                                         </div>

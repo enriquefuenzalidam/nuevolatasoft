@@ -30,7 +30,7 @@ const Contacto = () => {
               Potencie su operación con soluciones a medida: en Latasoft hacemos que su proyecto se adapte a las necesidades únicas de su negocio, llevándolo al siguiente nivel de eficiencia y productividad.
             </p>
             {/* Botón de contacto */}
-            <button data-aos-once="true" data-aos='fade' className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg transition-all ease-in-out duration-300 mx-auto`}>
+            <button className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg transition-all ease-in-out duration-300 mx-auto`}>
               Contáctanos
             </button>
           </div>

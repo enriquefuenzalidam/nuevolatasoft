@@ -156,18 +156,19 @@ const Servicios = () => {
     return (
         <main className={` relative flex-grow bg-white mt-16 `}>
 
-            <section className={` relative pb-32 transition-all ease-in-out duration-300 `} >
+            <section className={` relative pt-24 pb-32 transition-all ease-in-out duration-300 bg-black`} >
 
-                <div className={` absolute top-0 left-0 w-full h-full bg-white `} />
+                <div className={` absolute top-0 left-0 w-full h-full bg-white opacity-50 `} />
                 <div className={` absolute top-0 left-0 w-full h-full bg-[rgb(97,61,210)] opacity-30 `} />
                 <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/serviciosbg.jpg')] bg-center bg-cover opacity-30 `} />
 
-                <div className={` relative uppercase text-white font-Roboto font-bold pt-8 mb-4 max-w-5xl mx-auto text-center text-2xl tracking-widest `}>
-                    Nuestros Servicios</div>
-                <div className={` relative bg-white bg-opacity-40 py-12 `} >
+                <h2 className={` relative mb-4 max-w-5xl mx-auto text-3xl lg:text-4xl font-bold font-RobotoCondensed text-center `}>
+                    Nuestros Servicios</h2>
+
+                <div className={` relative py-12 `} >
                     <div className={` relative flex max-w-5xl mx-auto overflow-hidden items-center justify-center transition-all ease-in-out duration-300 `}>
                         {!!ServiciosData?.length && (
-                            <div className={` flex flex-col md:flex-row md:h-[32rem]`}>
+                            <div className={` flex flex-col md:flex-row md:h-[37rem] lg:h-[32rem] transition-all ease-in-out duration-300 `}>
                                 {ServiciosData.map((item, index) => (
                                     <ServicioItem
                                         id={item.id}

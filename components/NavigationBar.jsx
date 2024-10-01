@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Scrollhandling from 'components/Scrollhandling';
 
 const navItems = [
-  { linkText: 'Inicio', href: '/inicio' },
+  { linkText: 'Inicio', href: '/' },
   { linkText: 'Servicios', href: '/servicios' },
   { linkText: 'Portafolio', href: '/portafolio' },
   { linkText: 'Quienes somos', href: '/nosotros' },
