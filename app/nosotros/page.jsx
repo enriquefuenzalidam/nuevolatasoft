@@ -121,7 +121,7 @@ const Nosotros = () => {
                             <div className={`grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-6 text-center font-Roboto  `}>
                                 {porquenosotros.map((item, index) => (
                                     <div key={index} data-aos-once="true" data-aos='fade'>
-                                        <img src={item.icono.src} className={`mx-auto mb-6 w-24 h-auto opacity-70 `} />
+                                        <img src={item.icono.src} alt={item.titulo} className={`mx-auto mb-6 w-24 h-auto opacity-70 `} />
                                         <h3 className={` font-normal text-2xl lg:text-3xl font-RobotoCondensed`}>{item.titulo}</h3>
                                         {item.descripcion && (<p className={` font-light font-Roboto text-lg lg:text-xl opacity-80 `}>{item.descripcion}</p>)}
                                     </div>
