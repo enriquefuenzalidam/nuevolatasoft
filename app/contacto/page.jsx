@@ -1,8 +1,5 @@
 import instagramIcon from 'public/images/instagram.png';
 import whatsappIcon from 'public/images/wsp.png';
-import mailIcon from 'public/images/mail.png';
-import contactoFondo from 'public/images/contactofondo.jpg';
-import mapamientras from 'public/images/mapa-mientras.jpg'; // Importa tu imagen
 import banderaChile from 'public/images/b-ch.webp';
 import banderaPeru from 'public/images/b-pe.png';
 import banderaMexico from 'public/images/b-mx.png';
