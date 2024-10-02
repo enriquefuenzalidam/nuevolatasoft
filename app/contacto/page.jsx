@@ -5,10 +5,12 @@ import banderaPeru from 'public/images/b-pe.png';
 import banderaMexico from 'public/images/b-mx.png';
 import banderaBrasil from 'public/images/b-br.webp';
 import banderaEspaña from 'public/images/b-es.png';
+import NavigationBar from 'components/NavigationBar';
 const Contacto = () => {
   return (
     <>
-      <main className={`relative mt-16 overflow-hidden`}>
+      <NavigationBar />
+      <main className={`relative `}>
         {/* Fondo e imágenes */}
         <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center bg-[url('/images/contactofondo.jpg')]`} />
         <div className={`absolute top-0 left-0 w-full h-full bg-[#232323] bg-opacity-60`} />
@@ -17,19 +19,19 @@ const Contacto = () => {
 
         {/* Contenido */}
 
-        <section className={`relative mx-auto max-w-5xl pt-24 text-center text-white`}>
+        <section className={`relative mx-auto max-w-5xl pt-40 text-center text-white`}>
           <div className={`flex flex-col items-center`}>
             {/* Título y texto descriptivo */}
             <h2 data-aos-once="true" data-aos='fade' className={`text-3xl lg:text-4xl font-bold font-RobotoCondensed`}>Contacto</h2>
             <p data-aos-once="true" data-aos='fade'
-              className={`max-w-3xl mb-10 mt-6 text-lg md:text-xl lg:text-2xl text-justify indent-5 hyphens-auto font-Roboto opacity-80 mx-8 lg:mx-0`}
+              className={`max-w-3xl mt-6 text-lg md:text-xl lg:text-2xl text-justify indent-5 hyphens-auto font-Roboto opacity-80 mx-8 lg:mx-0`}
               style={{ lineHeight: `1.86` }} >
               Potencie su operación con soluciones a medida: en Latasoft hacemos que su proyecto se adapte a las necesidades únicas de su negocio, llevándolo al siguiente nivel de eficiencia y productividad.
             </p>
-            {/* Botón de contacto */}
+            {/* Botón de contacto 
             <button className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg transition-all ease-in-out duration-300 mx-auto`}>
               Contáctanos
-            </button>
+            </button>*/}
           </div>
 
         </section>
@@ -89,7 +91,7 @@ const Contacto = () => {
 
 
         <section className={`relative z-30 -translate-y-20`}> {/*  style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }} */}
-          <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+          <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800 [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
         </section>
 
         <section className={`relative bg-gray-800 px-8 lg:px-0 z-40 -mt-48 pb-24 pt-3  `}>
@@ -142,7 +144,6 @@ const Contacto = () => {
             </div>
           </div>
         </section>
-
 
       </main>
     </>

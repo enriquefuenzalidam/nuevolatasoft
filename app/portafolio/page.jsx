@@ -1,5 +1,6 @@
 "use client"; // Marcar el componente como Client Component
 import { useEffect, useState } from 'react';
+import NavigationBar from 'components/NavigationBar';
 
 const Portafolio = () => {
 
@@ -126,10 +127,11 @@ const Portafolio = () => {
 
     return (
         <>
-            <main className={`relative mt-16 `}>
+            <NavigationBar />
+            <main className={`relative  `}>
 
                 {/* Sección "Gracias por confiar en nosotros" */}
-                <section className={`relative pb-40 pt-24 px-8`}>
+                <section className={`relative pb-40 pt-40 px-8`}>
                     <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')]`} />
                     <div className={`absolute top-0 left-0 w-full h-full bg-purple-700 bg-opacity-80`} />
                     <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-60`} />
@@ -141,7 +143,7 @@ const Portafolio = () => {
                         <div className={`relative max-w-4xl mx-auto block w-full h-60 mt-16 `}>
                             {slides.map((item, index) => (
                                 <div key={index}
-                                    className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 max-w-xl h-full ${currentSlide === index ? 'opacity-100' : 'opacity-0' } transition-opacity ease-in-out duration-700`} >
+                                    className={`absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 max-w-xl h-full ${currentSlide === index ? 'opacity-100' : 'opacity-0'} transition-opacity ease-in-out duration-700`} >
                                     <img src={item.image}
                                         alt={`Slide ${index + 1}`}
                                         className={` mx-auto h-full w-auto object-contain `}
@@ -152,25 +154,25 @@ const Portafolio = () => {
                     )}
                     <div className={`relative max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-center mt-16 gap-6 md:gap-0`}>
                         {/* Texto 1 */}
-                            <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
-                                <span className={` text-4xl md:text-6xl `}>+5 años</span> <br className={` hidden md:inline `}/> de experiencia
-                            </h3>
-     
+                        <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
+                            <span className={` text-4xl md:text-6xl `}>+5 años</span> <br className={` hidden md:inline `} /> de experiencia
+                        </h3>
+
                         {/* Texto 2 */}
-                            <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
-                                <span className={` text-4xl md:text-6xl `}>+30 webs</span> <br className={` hidden md:inline `}/>creadas
-                            </h3>
-     
+                        <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
+                            <span className={` text-4xl md:text-6xl `}>+30 webs</span> <br className={` hidden md:inline `} />creadas
+                        </h3>
+
                         {/* Texto 3 */}
-                            <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
-                                <span className={` text-4xl md:text-6xl `}>+10 apps</span> <br className={` hidden md:inline `}/>creadas
-                            </h3>
-   
+                        <h3 data-aos-once="true" data-aos='fade' className={` tracking-tight text-4xl font-extralight font-RobotoCondensed`}>
+                            <span className={` text-4xl md:text-6xl `}>+10 apps</span> <br className={` hidden md:inline `} />creadas
+                        </h3>
+
                     </div>
                 </section>
 
                 <section className={`relative z-40 -translate-y-20`} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
-                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929]`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929]  [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
                 </section>
 
                 {/* Sección de Tarjetas */}
@@ -205,7 +207,7 @@ const Portafolio = () => {
                 </section>
 
                 <section className={`relative z-40 -translate-y-20`} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
-                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929]`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929]  [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
                 </section>
 
                 <section className={`relative -mt-48 pb-32 pt-40 `}>
@@ -238,7 +240,7 @@ const Portafolio = () => {
                 </section>
 
                 <section className={`relative z-30 -translate-y-20`}> {/*  style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }} */}
-                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800  [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
                 </section>
 
                 <section className={`relative z-40 -mt-48 bg-gray-800 pb-32 pt-10 `}>
@@ -258,6 +260,7 @@ const Portafolio = () => {
                         </div>
                     )}
                 </section>
+                
             </main>
         </>
     );

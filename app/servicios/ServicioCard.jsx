@@ -57,8 +57,8 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
 
     return (
         <>
-            <section key={index} className={`relative z-40 -translate-y-20`} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
-                <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929]`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+            <section key={index} className={`relative z-40 -translate-y-20 [filter:_drop-shadow(0_1rem_0.2rem_rgb(0,0,0,0.2))] `} >
+                <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-[#292929] [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
             </section>
 
             <section key={index} className={`relative -mt-48 transition-all ease-in-out duration-300`}>

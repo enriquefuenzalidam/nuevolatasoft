@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import NavigationBar from 'components/NavigationBar';
 
 import serviciosIconoA from 'public/images/serviciosIconoA.png';
 import serviciosIconoB from 'public/images/serviciosIconoB.png';
@@ -154,13 +155,15 @@ const Servicios = () => {
     };
 
     return (
-        <main className={` relative flex-grow bg-white mt-16 `}>
+        <>
+        <NavigationBar />
+        <main className={` relative flex-grow bg-white `}>
 
-            <section className={` relative pt-24 pb-32 transition-all ease-in-out duration-300 bg-black`} >
+            <section className={` relative pt-40 pb-32 transition-all ease-in-out duration-300 bg-black`} >
 
                 <div className={` absolute top-0 left-0 w-full h-full bg-white opacity-50 `} />
                 <div className={` absolute top-0 left-0 w-full h-full bg-[rgb(97,61,210)] opacity-30 `} />
-                <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/serviciosbg.jpg')] bg-center bg-cover opacity-30 `} />
+                <div className={` absolute top-0 left-0 w-full h-full bg-[url('/images/proyecto-fondo-b.jpg')] bg-center bg-cover opacity-30 `} />
 
                 <h2 className={` relative mb-4 max-w-5xl mx-auto text-3xl lg:text-4xl font-bold font-RobotoCondensed text-center `}>
                     Nuestros Servicios</h2>
@@ -206,6 +209,7 @@ const Servicios = () => {
 
 
         </main>
+        </>
     )
 
 }

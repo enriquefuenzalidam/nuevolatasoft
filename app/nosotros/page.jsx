@@ -1,5 +1,6 @@
 "use client"; // Marcar el componente como Client Component
 import { useEffect, useState } from 'react';
+import NavigationBar from 'components/NavigationBar';
 
 import icono1 from 'public/images/icono1.png';
 import icono2 from 'public/images/icono2.png';
@@ -88,10 +89,11 @@ const Nosotros = () => {
 
     return (
         <>
-            <main className={`relative mt-16 `}>
+            <NavigationBar />
+            <main className={`relative  `}>
 
                 {/* Sección ¿Quiénes somos? */}
-                <section className={`relative bg-gray-800 z-40 text-white pt-24 pb-12 px-6`}>
+                <section className={`relative bg-gray-800 z-40 text-white pt-40 pb-12 px-6`}>
                     <h2 data-aos-once="true" data-aos='fade' className={`text-[rgb(255,255,0)] text-center text-3xl lg:text-4xl mb-6 transition-all ease-in-out duration-200 font-bold font-RobotoCondensed `}>¿Quiénes somos?</h2>
                     <p data-aos-once="true" data-aos='fade' className={`text-justify hyphens-auto indent-8 max-w-5xl mx-auto text-lg md:text-xl lg:text-2xl transition-all ease-in-out duration-200 opacity-80 `} style={{ lineHeight: `1.86` }}>
                         Somos una empresa de software factory y de aplicaciones centrada en y para los clientes,
@@ -101,7 +103,7 @@ const Nosotros = () => {
                 </section>
 
                 <section className={`relative z-30 -translate-y-20`} style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
-                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800  [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
                 </section>
 
                 {/* Sección ¿Por qué nosotros? */}
@@ -133,7 +135,7 @@ const Nosotros = () => {
                 </section>
 
                 <section className={`relative z-30 -translate-y-20`} >
-                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800  [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
                 </section>
 
                 <section className={`relative bg-gray-800 z-40 text-white px-6 -mt-48 pt-12 pb-6`}>
@@ -144,7 +146,7 @@ const Nosotros = () => {
                 </section>
 
                 <section className={`relative z-30 -translate-y-20`}  style={{ filter: 'drop-shadow(0 1rem 0.2rem rgb(0,0,0,0.2))' }}>
-                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800`} style={{ clipPath: 'polygon(0 0, 100% 40%, 100% 100%, 0 60%)' }} />
+                    <div className={`transition-all ease-in-out duration-300 w-full h-48 bg-gray-800  [clip-path:_polygon(0_0,_100%_40%,_100%_100%,_0_60%)] `} />
                 </section>
 
                 {/* Sección del Slider */}
@@ -169,7 +171,6 @@ const Nosotros = () => {
                         </div>
                     )}
                 </section>
-
 
             </main>
         </>

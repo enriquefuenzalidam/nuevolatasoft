@@ -11,6 +11,10 @@ import icono5 from 'public/images/tienda.png';
 import icono6 from 'public/images/e-commerceapp.png';
 
 const Page = () => {
+
+  const dobleLChevron = '«';
+  const dobleRChevron = '»';
+
   const porquenosotros = [
     { icono: icono1, titulo: 'Proovedores' },
     { icono: icono2, titulo: 'Desarrollo de aplicaciones móviles' },
@@ -21,154 +25,190 @@ const Page = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-    const slides = [
-        {
-            text: "Cuando Nicolas se contactó con nosotros para ofrecernos servicios, la verdad vi su motivation y carisma por ayudarnos a mejorar como empresa, le dimos la oportunidad de mostrarnos que podía hacer él por Latasoft, hoy estoy a gusto con los servicios ofrecidos, sigan así y mejor chicos",
-            author: "Mauricio",
-            company: "Pampa Energía",
-            location: "Argentina" },
-        {
-            text: "Al haber sido uno de sus primeros clientes, no sabía como iban a trabajar, pero después de varios meses trabajando juntos, debo decir que son superprofesionales y nunca fallan con la calidad de sus servicios ",
-            author: "Felipe",
-            company: "ProyectaCorp",
-            location: "Chile" },
-        {
-            text: "Latasoft y su CEO se han movido siempre en el momento de la creación de startups y captar inversión para los MVP's que desarrollan, eso lo valoramos como institución financiera ",
-            author: "Max",
-            company: "Merrill Lynch",
-            location: "Chile" },
-        {
-            text: "Es agradable trabajar en conjunto con latasoft en el desarrollo de apps Android/IOS, nos han simplificado nuestro trabajo, 100% recomendados",
-            author: "Frederick",
-            company: "Mobitech Digital",
-            location: "EE.UU"},
-        {
-            text: "Una de las pocas empresas de Latinoamérica que conocemos, la verdad es grato trabajar con ellos, siempre son claros y transparentes para los procesos de apps y excelentes en calidad/precio en sus servicios",
-            author: "Sammuel",
-            company: "BuzzCast",
-            location: "EE.UU"}    
-            
-            
-    ];
+  const slides = [
+    {
+      text: "Cuando Nicolas se contactó con nosotros para ofrecernos servicios, la verdad vi su motivation y carisma por ayudarnos a mejorar como empresa, le dimos la oportunidad de mostrarnos que podía hacer él por Latasoft, hoy estoy a gusto con los servicios ofrecidos, sigan así y mejor chicos",
+      author: "Mauricio",
+      company: "Pampa Energía",
+      location: "Argentina"
+    },
+    {
+      text: "Al haber sido uno de sus primeros clientes, no sabía como iban a trabajar, pero después de varios meses trabajando juntos, debo decir que son superprofesionales y nunca fallan con la calidad de sus servicios ",
+      author: "Felipe",
+      company: "ProyectaCorp",
+      location: "Chile"
+    },
+    {
+      text: "Latasoft y su CEO se han movido siempre en el momento de la creación de startups y captar inversión para los MVP's que desarrollan, eso lo valoramos como institución financiera ",
+      author: "Max",
+      company: "Merrill Lynch",
+      location: "Chile"
+    },
+    {
+      text: "Es agradable trabajar en conjunto con latasoft en el desarrollo de apps Android/IOS, nos han simplificado nuestro trabajo, 100% recomendados",
+      author: "Frederick",
+      company: "Mobitech Digital",
+      location: "EE.UU"
+    },
+    {
+      text: "Una de las pocas empresas de Latinoamérica que conocemos, la verdad es grato trabajar con ellos, siempre son claros y transparentes para los procesos de apps y excelentes en calidad/precio en sus servicios",
+      author: "Sammuel",
+      company: "BuzzCast",
+      location: "EE.UU"
+    }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000); // Cambia el slide cada 5 segundos
+  ];
 
-        return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
-    }, [slides.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Cambia el slide cada 5 segundos
+
+    return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
+  }, [slides.length]);
 
   return (
     <>
-    <main className={` relative flex-grow bg-white mt-16 `}>
+      <main className={` relative flex-grow bg-white mt-0 `}>
 
-      {/* Primera sección con imagen de fondo y contenido */}
-      <section className={`relative w-full h-screen`}>
-        <div className={`absolute top-0 left-0 w-full h-full`}>
-          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-[url('/images/programando.jpg')]`} />
-          <div className={`absolute top-0 left-0 w-full h-[80%] bg-black bg-opacity-80`} />
-          <div className={`absolute bottom-0 left-0 w-full h-[20%] bg-purple-600 bg-opacity-60`} />
-        </div>
+        <section className={`relative w-full z-30  [filter:_drop-shadow(0_1rem_0.2rem_rgb(0,0,0,0.2))]`}>
 
-        <div className={`relative h-full mt-auto`}>
-          <div className={`flex flex-col justify-center items-center text-center text-white h-[80%]`}>
-            <h2 className={`text-3xl lg:text-4xl mb-6 transition-all ease-in-out duration-200 font-bold font-RobotoCondensed text-[rgb(255,255,0)]`}>
-              Latasoft - Desarrollo Web y Móvil
+          <div className={`relative flex flex-col items-center justify-center h-48 bg-gray-800 [clip-path:_polygon(0_0,100%_0,100%_100%,0_calc(100%_-_2.62rem))] `}>
+            <h1 data-aos-once="true" data-aos='fade-down' className={` relative text-center w-full font-Rubik text-5xl lg:text-7xl transition-all ease-in-out duration-200 font-extrabold uppercase text-[rgb(255,255,0)]`}>
+              Latasoft
+            </h1>
+            <h2 data-aos-once="true" data-aos='fade' className={` relative text-center text-white font-RobotoCondensed text-lg md:text-2xl text-opacity-70 mt-0 mb-8`}>Desarrollo Web y Móvil</h2>
+          </div>
+        </section>
+
+        {/* Primera sección con imagen de fondo y contenido */}
+        <section className={`relative w-full z-20 -mt-14`}>
+          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-[url('/images/coverBg.jpg')] opacity-70`} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-[#00ffff] bg-opacity-70`} />
+          <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-60`} />
+
+
+          <div className={`relative mt-auto w-full`}>
+            <div className={`flex flex-col justify-center items-center text-center text-white px-8 `}>
+
+              <div className={` max-w-3xl mx-auto pt-36 font-RobotoCondensed font-light text-center mt-5 w-full mb-0 text-2xl md:text-3xl lg:text-4xl text-black `} >
+                <p data-aos-once="true" data-aos='zoom-out' className={` opacity-70 leading-relaxed `}>
+                  Dedicados a ofrecer soluciones tecnológicas innovadoras, diseñamos sitios web y apps móviles a medida para alcanzar sus objetivos digitales.
+                </p>
+                <p data-aos-once="true" data-aos='zoom-out' className={` pt-8 text-[#5F3ED9] leading-relaxed  `} >
+                  Tu idea es nuestro código fuente.
+                </p>
+              </div>
+              <div data-aos-once="true" data-aos='fade' className={`mt-20 mb-36  mx-auto w-full max-w-5xl text-black bg-black bg-opacity-10 `}>
+
+              <hr data-aos-once="true" data-aos='flip-left' className={` mt-12 mb-14 h-2 bg-black block w-[15rem] mx-auto opacity-60 `} />
+
+                <h3 className={` text-center mx-auto w-full text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-80 `}>Conócenos</h3>
+
+                <p data-aos-once="true" data-aos='zoom-out' className={` pt-12 block text-center text-xl md:text-2xl lg:text-3xl font-medium font-Raleway  `} >
+                  <a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/servicios"> Servicios</a>
+                  <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/portafolio">Portafolio</a>
+                  <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/nosotros">Quiénes somos</a>
+                  <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/contacto">Contacto</a>
+                  
+                </p>
+
+                <hr data-aos-once="true" data-aos='flip-left' className={` mt-14 mb-12 h-1 bg-black block w-[15rem] mx-auto opacity-20 `} />
+
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        {/* Sección del Slider */}
+        <section className={`relative z-30  [filter:_drop-shadow(0_1rem_0.2rem_rgb(0,0,0,0.2))] `}>
+
+          <div className={`relative -mt-12 h-[33rem] md:h-[31rem] text-black [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_calc(100%_-_2.62rem))] `}>
+
+            {/* Imagen de fondo del slider */}
+            <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')] `} />
+            {/* Capas de color con opacidad */}
+            <div className={`absolute top-0 left-0 w-full h-full bg-purple-500 bg-opacity-80`} />
+            <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-50`} />
+
+            {/* Contenido del slider */}
+            {!!slides?.length && (
+              <div className={` relative max-w-5xl mx-auto block w-full h-full `}>
+                <h3 className={` relative text-center mx-auto w-full text-black pt-20 text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-60 `}>Dejando una huella con<br className={` inline md:hidden `} /> cada cliente</h3>
+                {slides.map((item, index) => (
+                  <div key={index} className={` absolute top-[20.2rem] md:top-[19rem] left-0 -translate-y-1/2 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide === index ? 'opacity-80' : 'opacity-0'} transition-all ease-in-out duration-700 `}>
+                    <div className={`  w-full h-full  flex flex-col justify-center items-center `}>
+                      <p className={` mb-6 italic font-NotoSerif px-6 `} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
+                      <h3 className={` font-bold px-6 `}>{item.author}</h3>
+                      <p className={` text-base lg:text-lg px-6 `} ><span className={` text-[rgb(255,255,0)] `} >{item.company}</span>, {item.location}.</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Sección de servicios */}
+        <section className={`relative -mt-14 pt-24 pb-24 px-6 z-20`}>
+          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/equipodetrabajo.jpg')]`} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-30`} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-white bg-opacity-65`} />
+
+          <div className={`relative z-10 mx-auto max-w-5xl text-black text-opacity-80 bg-white bg-opacity-20 rounded-md p-8`}>
+            <h2 className={`text-[rgb(46,46,46)] text-center text-3xl lg:text-4xl transition-all ease-in-out duration-200 font-bold font-RobotoCondensed`}>
+              Nuestros servicios
             </h2>
-            <p className={`mt-5 max-w-3xl mx-auto mb-12 text-lg md:text-xl lg:text-2xl text-justify indent-5 hyphens-auto italic font-NotoSerif`}>
-              Tu idea es nuestro código fuente
-            </p>
-            <Link href="/servicios">
-      <button className={`bg-[#5F3ED9] hover:bg-[#4C34B3] text-white py-2 px-8 rounded-full text-lg`}>
-        Saber más
-      </button>
-    </Link>
+            <p className={` max-w-2xl indent-5 text-left hyphens-auto mx-auto mt-3 mb-16 text-lg md:text-xl lg:text-xl font-medium `}>
+              En Latasoft estamos orgullosos de ofrecer nuestros servicios para gran parte de Hispanoamerica, cada cliente es un pilar en nuestro día a dia.</p>
+
+            {!!porquenosotros?.length && (
+              <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center text-lg lg:text-xl font-Roboto`}>
+                {porquenosotros.map((item, index) => (
+                  <div key={index} className={`p-4 `} data-aos-once="true" data-aos='fade'>
+                    <img src={item.icono.src} alt={item.titulo} className={`mx-auto mb-4 w-28 h-auto opacity-80 `} />
+                    <h3 className={`  font-medium font-RobotoCondensed text-black text-2xl lg:text-3xl `}>{item.titulo}</h3>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
+        </section>
 
-          <div className={`flex items-center justify-center text-center text-white h-[20%] px-8`}>
-            <p className={`mt-5 max-w-4xl mx-auto mb-12 text-lg md:text-xl lg:text-xl indent-5 hyphens-auto`}>
-            En Latasoft estamos orgullosos de ofrecer nuestros servicios para gran parte de Hispanoamerica, cada cliente es un pilar en nuestro día a dia            </p>
+        <section className={`relative z-20 h-16 px-6 -mt-14 [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_100%)] bg-[#FFFF00]`}>
+        </section>
+          {/* sección de "Sobre Nosotros" y "Testimonios" */}
+          {/*
+          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/empresa-fondo.jpg')]`} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-90`} />
+
+          
+          <div className={`relative z-10 mx-auto max-w-5xl text-black`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 text-center text-lg lg:text-xl font-Roboto`}>
+              
+              <div>
+                <h3 className={`font-bold text-2xl mb-7 text-black`}>Sobre Nosotros</h3>
+                <p className={`text-lg`}>
+                  Latasoft, empresa de desarrollo web y móvil dedicada a ofrecer soluciones tecnológicas innovadoras.
+                  Diseñamos sitios web y apps móviles a medida para alcanzar sus objetivos digitales.
+                </p>
+              </div>
+
+              
+              <div>
+                <h3 className={`font-bold mb-7 text-2xl text-[rgb(255,255,0)]`}>Testimonios</h3>
+                <p className={`text-lg italic font-NotoSerif`}>
+                  Dejando una huella con cada cliente
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Sección de servicios */}
-      <section className={`relative py-16 px-6`}>
-        <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/equipodetrabajo.jpg')]`} />
-        <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-30`} />
-        <div className={`absolute top-0 left-0 w-full h-full bg-white bg-opacity-65`} />
-
-        <div className={`relative z-10 mx-auto max-w-5xl text-[rgb(55,55,55)]`}>
-          <h2 className={`text-[rgb(46,46,46)] text-center text-3xl lg:text-4xl mb-16 transition-all ease-in-out duration-200 font-bold font-RobotoCondensed`}>
-            Nuestros servicios
-          </h2>
-
-          {!!porquenosotros?.length && (
-            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center text-lg lg:text-xl font-Roboto`}>
-              {porquenosotros.map((item, index) => (
-                <div key={index} className={`p-4 bg-slate-50 bg-opacity-20 rounded-lg shadow-md`}>
-                  <img src={item.icono.src} alt={item.titulo} className={`mx-auto mb-4 w-14 h-14`} />
-                  <h3 className={`font-medium mb-5`}>{item.titulo}</h3>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* sección de "Sobre Nosotros" y "Testimonios" */}
-<section className={`relative py-16 px-6`}>
-  <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/empresa-fondo.jpg')]`} />
-  <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-90`} />
-  
-  <div className={`relative z-10 mx-auto max-w-5xl text-white`}>
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 text-center text-lg lg:text-xl font-Roboto`}>
-      {/* Sobre Nosotros */}
-      <div>
-        <h3 className={`font-bold text-2xl mb-7 text-[rgb(255,255,0)]`}>Sobre Nosotros</h3>
-        <p className={`text-lg`}>
-          Latasoft, empresa de desarrollo web y móvil dedicada a ofrecer soluciones tecnológicas innovadoras. 
-          Diseñamos sitios web y apps móviles a medida para alcanzar sus objetivos digitales.
-        </p>
-      </div>
-
-      {/* Testimonios */}
-      <div>
-        <h3 className={`font-bold mb-7 text-2xl text-[rgb(255,255,0)]`}>Testimonios</h3>
-        <p className={`text-lg italic font-NotoSerif`}>
-          Dejando una huella con cada cliente
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+          */}{/* Testimonios */}{/* Sobre Nosotros */}
 
 
-{/* Sección del Slider */}
-<section className={`relative h-96 `}>
-
-{/* Imagen de fondo del slider */}
-<div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')] `} />
-{/* Capas de color con opacidad */}
-<div className={`absolute top-0 left-0 w-full h-full bg-purple-500 bg-opacity-80`} />
-<div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-50`} />
-
-{/* Contenido del slider */}
-{!!slides?.length && (
-    <div className={` relative max-w-5xl mx-auto block w-full h-full `}>
-        {slides.map((item, index) => (
-            <div key={index} className={` absolute top-48 left-0 -translate-y-1/2 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide===index ? 'opacity-80': 'opacity-0'} transition-all ease-in-out duration-700 `}>
-                <div className={`  w-full h-full  flex flex-col justify-center items-center `}>
-                <p className={` mb-6 italic font-NotoSerif px-6 `} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
-                <h3 className={` font-bold px-6 `}>{item.author}</h3>
-                <p className={` text-base lg:text-lg px-6 `} ><span className={` text-[rgb(255,255,0)] `} >{item.company}</span>, {item.location}.</p>
-                </div>
-            </div>
-        ))}
-    </div>
-)}
-</section></main>
+      </main>
 
     </>
   );
