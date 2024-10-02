@@ -83,37 +83,33 @@ const Page = () => {
 
         {/* Primera sección con imagen de fondo y contenido */}
         <section className={`relative w-full z-20 -mt-14`}>
-          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-[url('/images/coverBg.jpg')] opacity-70`} />
-          <div className={`absolute top-0 left-0 w-full h-full bg-[#00ffff] bg-opacity-70`} />
-          <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-60`} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-[url('/images/coverBg.jpg')] opacity-40`} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-[#00ffff] bg-opacity-40`} />
+          <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-70`} />
 
 
           <div className={`relative mt-auto w-full`}>
             <div className={`flex flex-col justify-center items-center text-center text-white px-8 `}>
 
-              <div className={` max-w-3xl mx-auto pt-36 font-RobotoCondensed font-light text-center mt-5 w-full mb-0 text-2xl md:text-3xl lg:text-4xl text-black `} >
-                <p data-aos-once="true" data-aos='zoom-out' className={` opacity-70 leading-relaxed `}>
+              <div data-aos-once="true" data-aos='zoom-out' className={` max-w-3xl mx-auto pt-36 font-RobotoCondensed font-light text-center mt-5 w-full mb-0 text-2xl md:text-3xl lg:text-4xl text-black `} >
+                <p className={` opacity-60 leading-relaxed `}>
                   Dedicados a ofrecer soluciones tecnológicas innovadoras, diseñamos sitios web y apps móviles a medida para alcanzar sus objetivos digitales.
                 </p>
-                <p data-aos-once="true" data-aos='zoom-out' className={` pt-8 text-[#5F3ED9] leading-relaxed  `} >
+                <p className={` pt-8 text-[#402994] leading-relaxed  `} >
                   Tu idea es nuestro código fuente.
                 </p>
               </div>
-              <div data-aos-once="true" data-aos='fade' className={`mt-20 mb-36  mx-auto w-full max-w-5xl text-black bg-black bg-opacity-10 `}>
+              <div data-aos-once="true" data-aos='fade' className={`mt-28 mb-36 py-8 rounded-md mx-auto w-full max-w-5xl bg-black bg-opacity-15 `}>
 
-              <hr data-aos-once="true" data-aos='flip-left' className={` mt-12 mb-14 h-2 bg-black block w-[15rem] mx-auto opacity-60 `} />
+                <h3 className={` text-center mx-auto w-full text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-50 text-[#08153e]` }>Conócenos</h3>
 
-                <h3 className={` text-center mx-auto w-full text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-80 `}>Conócenos</h3>
-
-                <p data-aos-once="true" data-aos='zoom-out' className={` pt-12 block text-center text-xl md:text-2xl lg:text-3xl font-medium font-Raleway  `} >
+                <p data-aos-once="true" data-aos='zoom-out' className={` pt-6 block text-center text-xl md:text-2xl lg:text-3xl font-medium font-Raleway text-[#08153e]  `} >
                   <a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/servicios"> Servicios</a>
                   <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/portafolio">Portafolio</a>
                   <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/nosotros">Quiénes somos</a>
                   <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/contacto">Contacto</a>
                   
                 </p>
-
-                <hr data-aos-once="true" data-aos='flip-left' className={` mt-14 mb-12 h-1 bg-black block w-[15rem] mx-auto opacity-20 `} />
 
               </div>
 
@@ -125,7 +121,7 @@ const Page = () => {
         {/* Sección del Slider */}
         <section className={`relative z-30  [filter:_drop-shadow(0_1rem_0.2rem_rgb(0,0,0,0.2))] `}>
 
-          <div className={`relative -mt-12 h-[33rem] md:h-[31rem] text-black [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_calc(100%_-_2.62rem))] `}>
+          <div className={`relative -mt-12 h-[28rem] text-black [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_calc(100%_-_2.62rem))] `}>
 
             {/* Imagen de fondo del slider */}
             <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/apretondemanos.png')] `} />
@@ -136,11 +132,12 @@ const Page = () => {
             {/* Contenido del slider */}
             {!!slides?.length && (
               <div className={` relative max-w-5xl mx-auto block w-full h-full `}>
-                <h3 className={` relative text-center mx-auto w-full text-black pt-20 text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-60 `}>Dejando una huella con<br className={` inline md:hidden `} /> cada cliente</h3>
+                
                 {slides.map((item, index) => (
-                  <div key={index} className={` absolute top-[20.2rem] md:top-[19rem] left-0 -translate-y-1/2 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide === index ? 'opacity-80' : 'opacity-0'} transition-all ease-in-out duration-700 `}>
-                    <div className={`  w-full h-full  flex flex-col justify-center items-center `}>
-                      <p className={` mb-6 italic font-NotoSerif px-6 `} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
+                  <div key={index} className={` absolute top-[14rem] left-0 -translate-y-1/2 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide === index ? 'opacity-80' : 'opacity-0'} transition-all ease-in-out duration-700 `}>
+                    <div className={`  w-full h-full flex flex-col justify-center items-center `}>
+                      <h3 className={` relative text-center mx-auto w-full text-white mb-6 text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-60 `}>Dejando una huella con cada cliente</h3>
+                      <p className={` mb-6 italic font-NotoSerif px-6 text-justify indent-5 hyphens-auto`} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
                       <h3 className={` font-bold px-6 `}>{item.author}</h3>
                       <p className={` text-base lg:text-lg px-6 `} ><span className={` text-[rgb(255,255,0)] `} >{item.company}</span>, {item.location}.</p>
                     </div>
@@ -153,11 +150,11 @@ const Page = () => {
 
         {/* Sección de servicios */}
         <section className={`relative -mt-14 pt-24 pb-24 px-6 z-20`}>
-          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/equipodetrabajo.jpg')]`} />
-          <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-30`} />
-          <div className={`absolute top-0 left-0 w-full h-full bg-white bg-opacity-65`} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/equipodetrabajo.jpg')] opacity-80 `} />
+          <div className={`absolute top-0 left-0 w-full h-full bg-white bg-opacity-40`} />
+          <div className={`absolute top-0 left-0 w-full h-full backdrop-grayscale-60 `} />
 
-          <div className={`relative z-10 mx-auto max-w-5xl text-black text-opacity-80 bg-white bg-opacity-20 rounded-md p-8`}>
+          <div className={`relative z-10 mx-auto max-w-5xl text-black text-opacity-80 bg-white bg-opacity-50 rounded-md py-12 px-4`}>
             <h2 className={`text-[rgb(46,46,46)] text-center text-3xl lg:text-4xl transition-all ease-in-out duration-200 font-bold font-RobotoCondensed`}>
               Nuestros servicios
             </h2>
@@ -168,7 +165,7 @@ const Page = () => {
               <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center text-lg lg:text-xl font-Roboto`}>
                 {porquenosotros.map((item, index) => (
                   <div key={index} className={`p-4 `} data-aos-once="true" data-aos='fade'>
-                    <img src={item.icono.src} alt={item.titulo} className={`mx-auto mb-4 w-28 h-auto opacity-80 `} />
+                    <img src={item.icono.src} alt={item.titulo} className={`mx-auto mb-4 w-28 h-auto opacity-60 `} />
                     <h3 className={`  font-medium font-RobotoCondensed text-black text-2xl lg:text-3xl `}>{item.titulo}</h3>
                   </div>
                 ))}
@@ -177,10 +174,10 @@ const Page = () => {
           </div>
         </section>
 
-        <section className={`relative z-20 h-16 px-6 -mt-14 [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_100%)] bg-[#FFFF00]`}>
-        </section>
           {/* sección de "Sobre Nosotros" y "Testimonios" */}
           {/*
+        <section className={`relative z-20 h-16 px-6 -mt-14 [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_100%)] bg-[#FFFF00]`}>
+
           <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/empresa-fondo.jpg')]`} />
           <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-90`} />
 
@@ -205,6 +202,7 @@ const Page = () => {
               </div>
             </div>
           </div>
+                  </section>
           */}{/* Testimonios */}{/* Sobre Nosotros */}
 
 
