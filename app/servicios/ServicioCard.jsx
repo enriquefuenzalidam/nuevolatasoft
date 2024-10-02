@@ -47,7 +47,7 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
             return (
                 <p className={`block mt-7`}>
                     <a className={`block font-medium text-base md:text-lg text-center py-1 bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white`} 
-                       href='' alt=''>
+                       href='/contacto' alt=''>
                        Cotizar
                     </a>
                 </p>

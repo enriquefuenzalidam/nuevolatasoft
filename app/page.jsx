@@ -16,7 +16,7 @@ const Page = () => {
   const dobleRChevron = '»';
 
   const porquenosotros = [
-    { icono: icono1, titulo: 'Proovedores' },
+    { icono: icono1, titulo: 'Proveedores' },
     { icono: icono2, titulo: 'Desarrollo de aplicaciones móviles' },
     { icono: icono3, titulo: 'Diseño de páginas web' },
     { icono: icono4, titulo: 'Base de datos' },

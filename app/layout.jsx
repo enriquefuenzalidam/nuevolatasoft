@@ -16,7 +16,7 @@ const RootLayout = ({ children }) => {
                 <meta charSet="UTF-8" />
                 
                 <meta property="og:title" content="Latasoft" />
-                <meta property="og:description" content="Proovedores. Desarrollo de aplicaciones móviles. Diseño de páginas web. Base de datos. Venta y suscripción de software. E-commerce." />
+                <meta property="og:description" content="Proveedores. Desarrollo de aplicaciones móviles. Diseño de páginas web. Base de datos. Venta y suscripción de software. E-commerce." />
                 <meta property="og:image" content="/images/latasoft-logo-card.png" />
                 <meta property="og:url" content="https://latasoft.cl" />
                 <meta property="og:type" content="website" />

@@ -6,6 +6,8 @@ import banderaMexico from 'public/images/b-mx.png';
 import banderaBrasil from 'public/images/b-br.webp';
 import banderaEspaña from 'public/images/b-es.png';
 import NavigationBar from 'components/NavigationBar';
+import Link from 'next/link';
+
 const Contacto = () => {
   return (
     <>
@@ -41,15 +43,21 @@ const Contacto = () => {
             <h3 data-aos-once="true" data-aos='fade' className={`text-3xl lg:text-4xl font-bold font-RobotoCondensed`} >Hablemos directamente</h3>
             <div data-aos-once="true" data-aos='fade' className={`mt-10 flex justify-between items-center max-w-xl mx-auto`}>
               <div className={``}>
+                <Link href="https://wa.me/56942978432">
                 <img src={whatsappIcon.src} alt="WhatsApp" className={`w-auto h-16`} />
+                </Link>
               </div>
               <div className={`text-white`}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className={`w-auto h-16`} viewBox="0 0 512 512">
-                  <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                </svg>
+                <Link href='mailto:latasoftchile@gmail.com'>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className={`w-auto h-16`} viewBox="0 0 512 512">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                  </svg>
+                </Link>
               </div>
               <div className={``}>
-                <img src={instagramIcon.src} alt="Instagram" className={`w-auto h-16`} />
+                <Link href='https://www.instagram.com/latasoftchile'>
+                  <img src={instagramIcon.src} alt="Instagram" className={`w-auto h-16`} />
+                </Link>
               </div>
             </div>
           </div>
