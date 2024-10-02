@@ -244,7 +244,7 @@ const Portafolio = () => {
                 </section>
 
                 <section className={`relative z-40 -mt-48 bg-gray-800 pb-32 pt-10 `}>
-                    <h2 data-aos-once="true" data-aos='fade' className={`max-w-5xl mx-auto text-3xl lg:text-4xl font-bold font-RobotoCondensed mb-12 text-center opacity-80 `}>Organizaciones que confían en nosotros</h2>
+                    <h2 data-aos-once="true" data-aos='fade' className={`max-w-5xl mx-auto text-3xl lg:text-4xl font-bold font-RobotoCondensed mb-12 text-center opacity-80 `}>Organizaciones que<br className={` inline md:hidden `}/> confían en nosotros</h2>
 
                     {!!logos?.length && (
                         <div className={`max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 items-center justify-center px-6 lg:px-0`}>

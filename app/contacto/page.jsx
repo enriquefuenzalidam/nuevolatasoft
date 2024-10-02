@@ -99,7 +99,7 @@ const Contacto = () => {
 
             <div className={` w-full lg:w-2/4 `} >
 
-              <h2 className={` text-2xl md:text-3xl font-bold mb-5 text-center md:text-left `} >Desarrollamos eso que tienes en  <br className={` inline md:hidden lg:inline`} />mente, contáctanos.</h2>
+              <h2 className={` text-2xl md:text-3xl font-bold mb-5 text-left `} >Desarrollamos eso que tienes en  mente, contáctanos.</h2>
               <p className={` text-base md:text-lg font-normal indent-5 text-justify hyphens-auto `}>En Latasoft, nos dedicamos apasionadamente a eso que tienes en mente. Nuestro compromiso es impulsar la innovación a través de soluciones tecnológicas excepcionales. Con un equipo de expertos en desarrollo, nos esforzamos por transformar ideas en realidades digitales. Descubre el poder de la programación con nosotros y lleva tu visión al siguiente nivel. Conecta con nosotros para construir el futuro juntos.</p>
 
             </div>
