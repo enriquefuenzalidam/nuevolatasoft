@@ -98,21 +98,30 @@ const Page = () => {
                   <span className={` block whitespace-nowrap `}>innovadoras, diseñamos sitios web y apps móviles a</span>
                   <span className={` block whitespace-nowrap `}>medida para alcanzar sus objetivos digitales.</span>
                 </p>
-                <hr className={`border-none  mt-5 block mx-auto bg-black bg-opacity-40 w-5 md:w-10 h-1 md:h-2 `} />
+                <div data-aos-once="true" data-aos='flip-left'><hr className={`border-none  mt-5 block mx-auto bg-black bg-opacity-40 w-5 md:w-10 h-1 md:h-2 `} /></div>
                 <p className={` mt-5 text-[#402994] leading-relaxed  `} >
                   Tu idea es nuestro código fuente.
                 </p>
               </div>
-              <div data-aos-once="true" data-aos='fade-up' className={`mt-28 mb-36 py-8 rounded-md mx-auto max-w-5xl bg-black bg-opacity-15 `}>
+              <div data-aos-once="true" data-aos='fade-up' className={`mt-28 mb-52 py-8 rounded-md mx-auto max-w-5xl bg-black bg-opacity-15 `}>
 
-                <h3 className={` text-center mx-auto w-full text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-50 text-[#08153e] px-8 ` }>Conócenos</h3>
+                <h3 className={` text-center mx-auto w-full text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-50 text-[#08153e] px-8 `}>Conócenos</h3>
 
                 <p className={` pt-6 block text-center text-xl md:text-2xl lg:text-3xl font-medium font-Raleway text-[#08153e]  px-8 `} >
-                  <a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/servicios"> Servicios</a>
-                  <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/portafolio">Portafolio</a>
-                  <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/nosotros">Quiénes somos</a>
-                  <span className={` hidden md:inline mx-5 `}>•</span><a className={` cursor-pointer py-2 md:py-0 block md:inline-block hover:scale-125 transition-transform ease-in-out duration-300 `} href="/contacto">Contacto</a>
-                  
+                  {[
+                    { href: '/servicios', label: 'Servicios' },
+                    { href: '/portafolio', label: 'Portafolio' },
+                    { href: '/nosotros', label: 'Quiénes somos' },
+                    { href: '/contacto', label: 'Contacto' },
+                  ].map((link, index, array) => (
+                    <span key={link.href}>
+                      <a className={` cursor-pointer py-2 md:py-0 block md:inline-block border-b-2 border-transparent hover:border-solid hover:border-b-2 hover:border-black transition-transform ease-in-out duration-300 `} href={link.href}>{link.label}</a>
+                      {index < array.length - 1 && (
+                        <span className="hidden md:inline mx-5">•</span>
+                      )}
+                    </span>
+                  ))}
+
                 </p>
 
               </div>
@@ -136,11 +145,11 @@ const Page = () => {
             {/* Contenido del slider */}
             {!!slides?.length && (
               <div className={` relative max-w-5xl mx-auto block w-full h-full `}>
-                
+
                 {slides.map((item, index) => (
                   <div key={index} className={` absolute top-[19rem] md:top-[14rem] left-0 -translate-y-1/2 text-white text-center font-Roboto text-xl lg:text-2xl ${currentSlide === index ? 'opacity-80' : 'opacity-0'} transition-all ease-in-out duration-700 `}>
                     <div className={`  w-full h-full flex flex-col justify-center items-center `}>
-                      <h3 className={` relative text-center mx-auto w-full text-white mb-6 text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-60 `}>Dejando una huella con<br className={` inline md:hidden `}/> cada cliente</h3>
+                      <h3 className={` relative text-center mx-auto w-full text-white mb-6 text-3xl lg:text-4xl font-bold font-RobotoCondensed opacity-60 `}>Dejando una huella con<br className={` inline md:hidden `} /> cada cliente</h3>
                       <p className={` mb-6 italic font-NotoSerif px-6 text-justify indent-5 hyphens-auto`} style={{ lineHeight: `1.62` }}>&quot;{item.text}&quot;</p>
                       <h3 className={` font-bold px-6 `}>{item.author}</h3>
                       <p className={` text-base lg:text-lg px-6 `} ><span className={` text-[rgb(255,255,0)] `} >{item.company}</span>, {item.location}.</p>
@@ -178,8 +187,8 @@ const Page = () => {
           </div>
         </section>
 
-          {/* sección de "Sobre Nosotros" y "Testimonios" */}
-          {/*
+        {/* sección de "Sobre Nosotros" y "Testimonios" */}
+        {/*
         <section className={`relative z-20 h-16 px-6 -mt-14 [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_100%)] bg-[#FFFF00]`}>
 
           <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/empresa-fondo.jpg')]`} />
