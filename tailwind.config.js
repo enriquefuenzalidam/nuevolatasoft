@@ -5,9 +5,6 @@ module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
-            backgroundImage: {
-                'fucsiaAzulRatioFondo': 'linear-gradient(162deg,#4351C6, rgb(18, 33, 77), #000, rgba(211, 0, 126, 0.3), #4351C6)',
-            },
             colors: {
                 neutral: colors.neutral
             },
@@ -19,9 +16,6 @@ module.exports = {
                 Raleway: ['Raleway', ...defaultTheme.fontFamily.sans],
                 Economica: ['Economica', ...defaultTheme.fontFamily.sans],
                 Rubik: ['Rubik', ...defaultTheme.fontFamily.sans]
-            },
-            transform: {
-              '3d': 'translateZ(-1px) scale(2)',
             },
             backdropGrayscale: {
               10: '.1',
