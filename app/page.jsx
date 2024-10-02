@@ -74,10 +74,11 @@ const Page = () => {
         <section className={`relative w-full z-30  [filter:_drop-shadow(0_1rem_0.2rem_rgb(0,0,0,0.2))]`}>
 
           <div className={`relative flex flex-col items-center justify-center h-48 bg-gray-800 [clip-path:_polygon(0_0,100%_0,100%_100%,0_calc(100%_-_2.62rem))] `}>
-            <h1 data-aos-once="true" data-aos='fade-down' className={` relative text-center w-full font-Rubik text-5xl lg:text-7xl transition-all ease-in-out duration-200 font-extrabold uppercase text-[rgb(255,255,0)]`}>
-              Latasoft
+            <h1 className={` relative block text-center w-full transition-all ease-in-out duration-200 `}>
+              <span data-aos-once="true" data-aos='fade-down' className={` block whitespace-nowrap font-Rubik text-5xl lg:text-7xl font-extrabold uppercase text-[rgb(255,255,0)] `}>Latasoft</span>
+              <span className={` hidden `}> | </span>
+              <span data-aos-once="true" data-aos='fade' className={` block whitespace-nowrap mt-0 mb-8 text-white font-RobotoCondensed text-lg md:text-2xl text-opacity-70 `}>Desarrollo Web y Móvil</span>
             </h1>
-            <h2 data-aos-once="true" data-aos='fade' className={` relative text-center text-white font-RobotoCondensed text-lg md:text-2xl text-opacity-70 mt-0 mb-8`}>Desarrollo Web y Móvil</h2>
           </div>
         </section>
 
@@ -159,7 +160,7 @@ const Page = () => {
               Nuestros servicios
             </h2>
             <p className={` max-w-2xl indent-5 text-left hyphens-auto mx-auto mt-3 mb-16 text-lg md:text-xl lg:text-xl font-medium `}>
-              En Latasoft estamos orgullosos de ofrecer nuestros servicios para gran parte de Hispanoamerica, cada cliente es un pilar en nuestro día a dia.</p>
+              En Latasoft estamos orgullosos de ofrecer nuestros servicios para gran parte de Hispanoamerica, cada cliente es un pilar en nuestro día a día.</p>
 
             {!!porquenosotros?.length && (
               <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center text-lg lg:text-xl font-Roboto`}>

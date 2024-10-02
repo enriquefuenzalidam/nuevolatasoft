@@ -18,6 +18,32 @@ const nextConfig = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/(.*)',
+        has: [
+          {
+            type: 'host',
+            value: 'www.latasoft.cl',
+          },
+        ],
+        destination: 'https://latasoft.cl/:path*',
+        permanent: true, // This makes it a 301 redirect from www to non-www
+      },
+      {
+        source: '/(.*)',
+        has: [
+          {
+            type: 'host',
+            value: 'latasoft.cl',
+          },
+        ],
+        destination: 'https://www.latasoft.cl/:path*',
+        permanent: true, // Swap this based on your preference
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
