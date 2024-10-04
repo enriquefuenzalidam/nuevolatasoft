@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-
 import icono1 from 'public/images/des-intranet.png';
 import icono2 from 'public/images/app.png';
 import icono3 from 'public/images/web.png';
@@ -11,9 +10,6 @@ import icono5 from 'public/images/tienda.png';
 import icono6 from 'public/images/e-commerceapp.png';
 
 const Page = () => {
-
-  const dobleLChevron = '«';
-  const dobleRChevron = '»';
 
   const porquenosotros = [
     { icono: icono1, titulo: 'Proveedores' },
@@ -74,12 +70,13 @@ const Page = () => {
         <section className={`relative w-full z-30  [filter:_drop-shadow(0_1rem_0.2rem_rgb(0,0,0,0.2))]`}>
 
           <div className={`relative flex flex-col items-center justify-center h-48 bg-gray-800 [clip-path:_polygon(0_0,100%_0,100%_100%,0_calc(100%_-_2.62rem))] `}>
-            <h1 className={` relative block text-center w-full transition-all ease-in-out duration-200 `}>
-              <span data-aos-once="true" data-aos='fade-down' className={` block whitespace-nowrap font-Rubik text-5xl lg:text-7xl font-extrabold uppercase text-[rgb(255,255,0)] `}>Latasoft</span>
+            <h1 data-aos-once="true" data-aos='fade' className={` relative block text-center w-full transition-all ease-in-out duration-200 `}>
+              <span className={` block whitespace-nowrap font-Rubik text-5xl lg:text-7xl font-extrabold uppercase text-[rgb(255,255,0)] `}>Latasoft</span>
               <span className={` hidden `}> | </span>
-              <span data-aos-once="true" data-aos='fade' className={` block whitespace-nowrap mt-0 mb-8 text-white font-RobotoCondensed text-lg md:text-2xl text-opacity-70 `}>Desarrollo Web y Móvil</span>
+              <span className={` block whitespace-nowrap mt-0 mb-8 text-white font-RobotoCondensed text-lg md:text-2xl text-opacity-70 `}>Desarrollo Web y Móvil</span>
             </h1>
           </div>
+      
         </section>
 
         {/* Primera sección con imagen de fondo y contenido */}
@@ -112,7 +109,7 @@ const Page = () => {
                     { href: '/servicios', label: 'Servicios' },
                     { href: '/portafolio', label: 'Portafolio' },
                     { href: '/nosotros', label: 'Quiénes somos' },
-                    { href: '/contacto', label: 'Contacto' },
+                    { href: '/contacto', label: 'Contacto' }
                   ].map((link, index, array) => (
                     <span key={link.href}>
                       <a className={` cursor-pointer py-2 md:py-0 block md:inline-block border-b-2 border-transparent hover:border-solid hover:border-b-2 hover:border-black transition-transform ease-in-out duration-300 `} href={link.href}>{link.label}</a>
@@ -186,38 +183,6 @@ const Page = () => {
             )}
           </div>
         </section>
-
-        {/* sección de "Sobre Nosotros" y "Testimonios" */}
-        {/*
-        <section className={`relative z-20 h-16 px-6 -mt-14 [clip-path:_polygon(0_0,100%_calc(0%_+_2.62rem),100%_100%,0_100%)] bg-[#FFFF00]`}>
-
-          <div className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/empresa-fondo.jpg')]`} />
-          <div className={`absolute top-0 left-0 w-full h-full bg-black bg-opacity-90`} />
-
-          
-          <div className={`relative z-10 mx-auto max-w-5xl text-black`}>
-            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 text-center text-lg lg:text-xl font-Roboto`}>
-              
-              <div>
-                <h3 className={`font-bold text-2xl mb-7 text-black`}>Sobre Nosotros</h3>
-                <p className={`text-lg`}>
-                  Latasoft, empresa de desarrollo web y móvil dedicada a ofrecer soluciones tecnológicas innovadoras.
-                  Diseñamos sitios web y apps móviles a medida para alcanzar sus objetivos digitales.
-                </p>
-              </div>
-
-              
-              <div>
-                <h3 className={`font-bold mb-7 text-2xl text-[rgb(255,255,0)]`}>Testimonios</h3>
-                <p className={`text-lg italic font-NotoSerif`}>
-                  Dejando una huella con cada cliente
-                </p>
-              </div>
-            </div>
-          </div>
-                  </section>
-          */}{/* Testimonios */}{/* Sobre Nosotros */}
-
 
       </main>
 

@@ -3,8 +3,11 @@ import { Footer } from '../components/footer';
 import AOSInitializer from 'components/AOSInitializer';
 
 export const metadata = {
-    title: 'Latasoft'
-};
+    title: {
+      default: 'Latasoft',
+      template: '%s | Latasoft'
+    }
+  }
 
 const RootLayout = ({ children }) => {
     return (
