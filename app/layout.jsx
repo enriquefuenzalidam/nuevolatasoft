@@ -39,7 +39,7 @@ const RootLayout = ({ children }) => {
                 <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512x512.png" />
 
             </head>
-            <body className="antialiased text-white min-w-full min-h-screen bg-black flex flex-col ">
+            <body className="antialiased text-white min-w-full min-h-screen bg-black flex flex-col relative ">
                 <AOSInitializer />
                 {children}
                 <Footer />

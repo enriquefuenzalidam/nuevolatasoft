@@ -16,7 +16,7 @@ const NavigationBar = () => {
       
       <div className={` 
         [clip-path:_polygon(0_0,100%_0,100%_100%,0_calc(100%_-_1.38rem))] 
-        mx-auto px-8 w-full h-20 hover:md:h-20 pt-3 pb-6 bg-black backdrop-blur-md overflow-hidden hover:overflow-visible hover:h-auto hover:md:overflow-hidden `}>
+        mx-auto px-8 w-full h-20 hover:md:h-20 pt-3 pb-6 bg-black overflow-hidden hover:overflow-visible hover:h-auto hover:md:overflow-hidden `}>
 
       {!!navItems?.length && (
         <ul className={` max-w-5xl w-full h-full mx-auto flex flex-col md:flex-row gap-x-8 items-start md:items-center justify-start  md:justify-center `}>
