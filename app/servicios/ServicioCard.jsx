@@ -81,7 +81,7 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
 
                 <div id={id} className={`relative pb-32 pt-40 w-full`}>
                     <div className={`relative flex max-w-5xl mx-auto items-center justify-center transition-all ease-in-out duration-300`}>
-                        <div data-aos-once="true" data-aos='fade' className={` relative rounded-md font-Raleway p-5 w-80 md:w-[42rem] transition-all ease-in-out duration-300 bg-white bg-opacity-60`}>
+                        <div data-aos-once="true" data-aos='fade' className={` z-40 relative rounded-md font-Raleway p-5 w-80 md:w-[42rem] transition-all ease-in-out duration-300 bg-white bg-opacity-60`}>
 
                             <div className={`flex flex-col-reverse md:flex-row transition-all ease-in-out duration-300 justify-center items-center px-0 pt-0 md:px-3 md:pt-3`}>
                                 <div className={`w-full md:w-7/12 transition-all ease-in-out duration-300`}>
