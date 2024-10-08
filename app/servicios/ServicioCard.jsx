@@ -15,7 +15,7 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
             if (isDescriptionVisible) {
                 descriptionRef.current.style.height = `${descriptionRef.current.scrollHeight}px`;
             } else {
-                descriptionRef.current.style.height = '2.5rem';
+                descriptionRef.current.style.height = '2.7rem';
             }
         }
     }, [isDescriptionVisible]);
