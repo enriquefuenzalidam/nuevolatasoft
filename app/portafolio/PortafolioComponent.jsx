@@ -23,7 +23,6 @@ const PortafolioComponent = () => {
 
 
     const slides = [
-        { image: "/images/cliente0.png" },
         { image: "/images/cliente1.jpg" },
         { image: "/images/cliente2.png" },
         { image: "/images/cliente3.png" },
