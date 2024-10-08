@@ -24,7 +24,7 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
         if (titulo === "Proveedores para agencias de marketing") {
             return (
                 <p className={`block mt-7`}>
-                    <a className={`block font-medium text-base md:text-lg text-center py-1 bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white`}
+                    <a className={`block font-semibold text-base md:text-lg text-center py-1 bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white`}
                         href='/contactar' alt='Contactar'>
                         Contactar
                     </a>
@@ -34,13 +34,13 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
             return (
                 <>
                     <p className={`block mt-7`}>
-                        <a className={`block font-medium text-base md:text-lg text-center py-1 bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white`}
+                        <a className={`block font-semibold text-base md:text-lg text-center py-1 bg-[#6a4bd0] hover:bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white text-opacity-70 hover:text-opacity-100 hover:shadow-md hover:shadow-[rgba(0,0,0,0.4)] transition-all ease-in-out duration-300 `}
                             href='mailto:latasoftweb@gmail.com' alt='Vender o suscribir mi software' target="_blank" rel="noopener noreferrer">
                             Vender o suscribir mi software
                         </a>
                     </p>
                     <p className={`block mt-3`}>
-                        <a className={`block font-medium text-base md:text-lg text-center py-1 bg-[#EDE8FB] border-solid border-2 border-[#613DD2] border-opacity-10 rounded-full text-[#613DD2]`}
+                        <a className={`block font-semibold text-base md:text-lg text-center py-1 bg-[#EDE8FB] hover:bg-[#EDE8FB] border-solid border-2 border-[#613DD2] border-opacity-10 rounded-full text-[#613DD2] text-opacity-70 hover:text-opacity-100 hover:shadow-md hover:shadow-[rgba(0,0,0,0.4)] transition-all ease-in-out duration-300 `}
                             href='https://softwareya.cl/' alt='Comprar o suscribir a un software' target="_blank" rel="noopener noreferrer">
                             Comprar o suscribir a un software
                         </a>
@@ -50,7 +50,7 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
         } else if (titulo === "Venta de base de datos") {
             return (
                 <p className={`block mt-7`}>
-                    <a className={`block font-medium text-base md:text-lg text-center py-1 bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white`}
+                    <a className={`block font-semibold text-base md:text-lg text-center py-1 bg-[#6a4bd0] hover:bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white text-opacity-70 hover:text-opacity-100 hover:shadow-md hover:shadow-[rgba(0,0,0,0.4)] transition-all ease-in-out duration-300 `}
                         href='https://impulsoventa.netlify.app/' alt='Comprar base de datos' target="_blank" rel="noopener noreferrer">
                         Comprar base de datos
                     </a>
@@ -59,7 +59,7 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
         } else {
             return (
                 <p className={`block mt-7`}>
-                    <a className={`block font-medium text-base md:text-lg text-center py-1 bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white`}
+                    <a className={`block font-semibold text-base md:text-lg text-center py-1 bg-[#6a4bd0] hover:bg-[#613DD2] border-solid border-2 border-[#613DD2] rounded-full text-white text-opacity-70 hover:text-opacity-100 hover:shadow-md hover:shadow-[rgba(0,0,0,0.4)] transition-all ease-in-out duration-300 `}
                         href='mailto:latasoftweb@gmail.com' alt=''>
                         Contactar
                     </a>
@@ -103,9 +103,9 @@ const ServicioCard = ({ id, index, titulo, precio, cuotas, descripcion, imagen, 
                                 <div className={`block mt-3`} >
 
                                     <div ref={descriptionRef}
-                                        className={` transition-all ease-in-out duration-300 py-1 bg-[#EDE8FB] border-solid border-2 border-[#613DD2] border-opacity-10 rounded-3xl overflow-hidden `}>
-                                        <p className={` font-medium text-base md:text-lg text-center text-[#613DD2] `}>
-                                            <span className={` cursor-pointer `} onClick={toggleDescriptionVisibility}>
+                                        className={` ${isDescriptionVisible ? ' shadow-md shadow-[rgba(0,0,0,0.4)] ':' hover:shadow-md hover:shadow-[rgba(0,0,0,0.4)] '} transition-all ease-in-out duration-300 py-1 bg-[#EDE8FB] border-solid border-2 border-[#613DD2] border-opacity-10 rounded-3xl overflow-hidden `}>
+                                        <p onClick={toggleDescriptionVisibility} className={` cursor-pointer font-semibold ${isDescriptionVisible ? 'text-opacity-100 ':'text-opacity-70 hover:text-opacity-100 ' } text-base md:text-lg text-center text-[#613DD2] transition-all ease-in-out duration-300 `}>
+                                            <span className={` `}>
                                                 {isDescriptionVisible ? 'Ocultar lo que incluye ' : 'Ver lo que incluye '}
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
